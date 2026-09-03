@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivp-red: #b51f2a;
+  --color-ivp-red-dark: #861721;
+  --color-ivp-red-soft: #f9e8e9;
+  --color-ivp-ink: #171717;
+  --color-ivp-muted: #6b6b6b;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--color-ivp-ink); background: white; }
+::selection { background: #b51f2a; color: white; }
+.font-display { font-family: var(--font-display); }
+.section-label { @apply text-xs font-bold uppercase tracking-[0.2em] text-ivp-red; }
+.container-page { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10; }
