@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Heart } from 'lucide-react'
 import heroImage from '../../assets/heroImage.jpg'
+// import heroImage from '../../assets/imghero.jpeg'
 
 export default function HeroHome() {
   return (
@@ -27,7 +28,7 @@ export default function HeroHome() {
         <div className="max-w-4xl text-white">
           {/* Eyebrow */}
           <div className="mb-7 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-ivp-red">
               <Heart size={16} fill="currentColor" strokeWidth={1.5} />
             </span>
 
@@ -42,15 +43,16 @@ export default function HeroHome() {
 
           {/* Main Heading */}
           <h1 className="max-w-4xl font-display text-5xl leading-[0.94] tracking-[-0.045em] sm:text-6xl md:text-7xl lg:text-[6.5rem]">
-            Caring for people.
+            Prendre soin des gens.
             <br />
-            <span className="text-white/70">Changing lives.</span>
+            <span className="text-white/70">Changer des vies.</span>
           </h1>
 
           {/* Description */}
           <p className="mt-8 max-w-xl text-base leading-8 text-white/85 sm:text-lg">
-            IVP is dedicated to bringing compassionate healthcare and meaningful
-            support to people and communities who need it most.
+            IVP s’engage à apporter des soins de santé compatissants et un
+            soutien significatif aux personnes et communautés qui en ont le plus
+            besoin.
           </p>
 
           {/* Buttons */}
@@ -60,7 +62,7 @@ export default function HeroHome() {
               to="/donate"
               className="group inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-bold text-neutral-900 shadow-lg transition-all duration-300 hover:bg-ivp-red hover:text-white"
             >
-              Support IVP
+              Soutenez IVP
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-ivp-red text-white transition-all duration-300 group-hover:bg-white group-hover:text-ivp-red">
                 <ArrowRight
                   size={15}
@@ -74,7 +76,7 @@ export default function HeroHome() {
               to="/about"
               className="group inline-flex items-center gap-3 rounded-full border border-white/40 bg-black/10 px-7 py-4 text-sm font-bold text-white backdrop-blur-md transition-all duration-300 hover:border-white hover:bg-white/10"
             >
-              Discover our mission
+              Décovourez notre mission
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-1"
@@ -86,11 +88,11 @@ export default function HeroHome() {
           <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-5 border-t border-white/25 pt-6">
             <div>
               <p className="text-xl font-semibold tracking-tight sm:text-2xl">
-                Healthcare
+                Soins de santé
               </p>
 
               <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/60 sm:text-xs">
-                With compassion
+                Avec compassion
               </p>
             </div>
 
@@ -98,11 +100,11 @@ export default function HeroHome() {
 
             <div>
               <p className="text-xl font-semibold tracking-tight sm:text-2xl">
-                Community
+                Communauté
               </p>
 
               <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/60 sm:text-xs">
-                With purpose
+                Avec un but
               </p>
             </div>
 
@@ -110,11 +112,11 @@ export default function HeroHome() {
 
             <div>
               <p className="text-xl font-semibold tracking-tight sm:text-2xl">
-                People
+                Personnalités
               </p>
 
               <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-white/60 sm:text-xs">
-                At the center
+                Au centre
               </p>
             </div>
           </div>

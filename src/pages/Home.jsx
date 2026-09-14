@@ -13,18 +13,18 @@ import FinalCTA from '../components/Home/FinalCTA'
 
 const programs = [
   [
-    'Community Care',
-    'Create a clear space for IVP’s community healthcare initiatives and outreach work.',
+    'Soins communautaires',
+    'Distribuer les médicaments de première nécessité aux orphelinats.',
     HeartPulse,
   ],
   [
-    'Compassionate Support',
-    'Highlight the people, families and communities who are at the heart of the mission.',
+    'Soutien compatissant',
+    'Prendre en charge les frais médicaux desdits enfants pour les cas qui nécessitent les soins dans une institution hospitlière.',
     HandHeart,
   ],
   [
-    'Nursing in Action',
-    'Show the work of nurses and volunteers through stories, photography and impact.',
+    'Soins infirmiers en action',
+    'Implanter une représentation dans les villes où se trouve un plus grand nombre des enfants en situation de rue.',
     UsersRound,
   ],
 ]
@@ -37,9 +37,9 @@ export default function Home() {
       <AboutHome />
       <section className="container-page py-24">
         <SectionHeading
-          eyebrow="Our purpose"
-          title="Healthcare with humanity at the center."
-          text="The final copy can be replaced with IVP’s official mission and history."
+          eyebrow="Mission"
+          title="Notre mission"
+          text="Administrer les soins infirmiers auxdits enfant"
         />
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {programs.map(([title, text, Icon]) => (

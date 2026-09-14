@@ -7,36 +7,36 @@ import {
   UsersRound,
 } from 'lucide-react'
 
-import whatWeDoImage from '../../assets/heroImage.jpg'
+import whatWeDoImage from '../../assets/img15.jpeg'
 
 const services = [
   {
     number: '01',
     icon: HeartPulse,
-    title: 'Healthcare & Nursing',
+    title: 'Soins de santé et soins infirmiers',
     description:
-      'Compassionate healthcare support focused on the needs of the people and communities we serve.',
+      'Des soins de santé empreints de compassion, axés sur les besoins des personnes et des communautés que nous servons.',
   },
   {
     number: '02',
     icon: HandHeart,
-    title: 'Community Outreach',
+    title: 'Action communautaire',
     description:
-      'Bringing care, support and human connection closer to communities that need it most.',
+      'Rapprocher les soins, le soutien et la solidarité des communautés qui en ont le plus besoin.',
   },
   {
     number: '03',
     icon: GraduationCap,
-    title: 'Health Education',
+    title: 'Éducation à la santé',
     description:
-      'Sharing knowledge and practical health information that can help people make informed choices.',
+      'Partager des connaissances et des informations pratiques en matière de santé afin d’aider chacun à faire des choix éclairés.',
   },
   {
     number: '04',
     icon: UsersRound,
-    title: 'Support for Vulnerable People',
+    title: 'Soutien aux personnes vulnérables',
     description:
-      'Creating pathways to compassionate support for people facing difficult circumstances.',
+      'Mettre en place des moyens d’accès à un accompagnement bienveillant pour les personnes confrontées à des situations difficiles.',
   },
 ]
 
@@ -53,22 +53,24 @@ export default function WhatWeDo() {
               <span className="h-px w-8 bg-ivp-red" />
 
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-ivp-red">
-                What We Do
+                Ce que nous faisons
               </p>
             </div>
           </div>
 
           <div>
             <h2 className="max-w-3xl font-display text-4xl leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-[4.4rem]">
-              Care beyond the clinic.
+              Des soins au-delà de la clinique.
               <br />
-              <span className="text-ivp-red">Support beyond the moment.</span>
+              <span className="text-ivp-red">
+                Un soutien au-delà de l’instant.
+              </span>
             </h2>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-ivp-muted sm:text-lg">
-              Our work is rooted in compassion, dignity and a commitment to
-              making healthcare and meaningful support more accessible to the
-              people and communities we serve.
+              Notre action repose sur la compassion, la dignité et la volonté de
+              rendre les soins de santé et un soutien significatif plus
+              accessibles aux personnes et aux communautés que nous servons.
             </p>
           </div>
         </div>
@@ -95,16 +97,17 @@ export default function WhatWeDo() {
               </div>
 
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
-                Our approach
+                Notre approche
               </p>
 
               <h3 className="mt-3 font-display text-3xl leading-tight tracking-[-0.025em] sm:text-4xl">
-                Putting people at the heart of care.
+                L’humain au cœur des soins.
               </h3>
 
               <p className="mt-4 max-w-lg text-sm leading-6 text-white/75">
-                We believe healthcare is about more than treatment. It is about
-                listening, understanding and showing up for people.
+                Nous croyons que les soins de santé vont au-delà du traitement.
+                Il s’agit d’écouter, de comprendre et d’être présents aux côtés
+                des personnes.
               </p>
             </div>
           </div>
@@ -143,15 +146,15 @@ export default function WhatWeDo() {
         ====================================================== */}
         <div className="mt-12 flex flex-col justify-between gap-6 border-t border-neutral-200 pt-8 sm:flex-row sm:items-center">
           <p className="max-w-lg text-sm leading-6 text-ivp-muted">
-            Explore the work behind IVP and learn more about how our
-            organization serves its community.
+            Découvrez le travail de l’IVP et apprenez-en davantage sur la façon
+            dont notre organisation accompagne sa communauté.
           </p>
 
           <Link
             to="/about"
             className="group inline-flex w-fit items-center gap-3 rounded-full bg-ivp-red px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-ivp-red-dark"
           >
-            Explore our work
+            Découvrez notre action
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 transition group-hover:bg-white group-hover:text-ivp-red">
               <ArrowUpRight size={15} />
             </span>

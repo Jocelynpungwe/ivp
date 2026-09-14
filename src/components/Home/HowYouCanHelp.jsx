@@ -5,26 +5,26 @@ const waysToHelp = [
   {
     number: '01',
     icon: Heart,
-    title: 'Donate',
+    title: 'Faire un don',
     description:
-      'Your contribution can help support compassionate healthcare and meaningful care for people who need it.',
+      'Votre contribution peut aider à soutenir des soins de santé empreints de compassion et un accompagnement significatif pour les personnes qui en ont besoin.',
     link: '/donate',
     featured: true,
   },
   {
     number: '02',
     icon: HandHeart,
-    title: 'Volunteer',
+    title: 'Devenir bénévole',
     description:
-      'Give your time, skills and compassion to help strengthen the work of IVP.',
+      'Offrez votre temps, vos compétences et votre compassion pour contribuer à renforcer l’action de l’IVP.',
     link: '/contact',
   },
   {
     number: '03',
     icon: UsersRound,
-    title: 'Partner With Us',
+    title: 'Devenir partenaire',
     description:
-      'Join us in building stronger communities through collaboration, support and shared purpose.',
+      'Joignez-vous à nous pour bâtir des communautés plus fortes grâce à la collaboration, au soutien et à un objectif commun.',
     link: '/contact',
   },
 ]
@@ -43,27 +43,27 @@ export default function HowYouCanHelp() {
               <span className="h-px w-8 bg-ivp-red" />
 
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-ivp-red">
-                How You Can Help
+                Comment vous pouvez aider
               </p>
             </div>
 
             <p className="mt-6 max-w-xs text-sm leading-6 text-ivp-muted">
-              Change doesn't happen alone. There are many ways to become part of
-              the work.
+              Le changement ne se fait pas seul. Il existe de nombreuses façons
+              de participer à notre action.
             </p>
           </div>
 
           <div>
             <h2 className="max-w-4xl font-display text-4xl leading-[1.02] tracking-[-0.045em] sm:text-5xl lg:text-[4.7rem]">
-              There is more than
+              Il existe plus d’une
               <br />
-              <span className="text-ivp-red">one way to care.</span>
+              <span className="text-ivp-red">façon de prendre soin.</span>
             </h2>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-ivp-muted sm:text-lg">
-              Whether you give, volunteer or build a partnership, your
-              involvement can help us continue putting people at the heart of
-              healthcare.
+              Que vous fassiez un don, deveniez bénévole ou établissiez un
+              partenariat, votre engagement peut nous aider à continuer de
+              placer l’humain au cœur des soins de santé.
             </p>
           </div>
         </div>
@@ -94,16 +94,17 @@ export default function HowYouCanHelp() {
             {/* Main content */}
             <div className="relative mt-24 max-w-2xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/55">
-                Make a difference
+                Faites la différence
               </p>
 
               <h3 className="mt-4 font-display text-4xl leading-[1.02] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
-                Your support can become someone's care.
+                Votre soutien peut devenir un soin pour quelqu’un.
               </h3>
 
               <p className="mt-6 max-w-xl text-sm leading-7 text-white/70 sm:text-base">
-                Every contribution helps strengthen the work of IVP and support
-                our commitment to compassionate healthcare.
+                Chaque contribution contribue à renforcer l’action de l’IVP et à
+                soutenir notre engagement envers des soins de santé empreints de
+                compassion.
               </p>
             </div>
 
@@ -112,7 +113,7 @@ export default function HowYouCanHelp() {
               to="/donate"
               className="group/button relative mt-10 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-ivp-red transition-all duration-300 hover:bg-neutral-950 hover:text-white"
             >
-              Donate to IVP
+              Faire un don à l’IVP
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-ivp-red/10 transition group-hover/button:bg-white/10">
                 <ArrowUpRight
                   size={15}
@@ -137,13 +138,13 @@ export default function HowYouCanHelp() {
         <div className="mt-16 grid gap-8 border-t border-neutral-200 pt-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <p className="font-display text-2xl leading-tight tracking-[-0.025em] text-neutral-900 sm:text-3xl">
-              Small actions can create
-              <span className="text-ivp-red"> lasting change.</span>
+              Les petits gestes peuvent créer
+              <span className="text-ivp-red"> un changement durable.</span>
             </p>
 
             <p className="mt-3 max-w-xl text-sm leading-6 text-ivp-muted">
-              Find the way that feels right for you and become part of the IVP
-              community.
+              Trouvez la manière qui vous convient et rejoignez la communauté de
+              l’IVP.
             </p>
           </div>
 
@@ -151,7 +152,7 @@ export default function HowYouCanHelp() {
             to="/contact"
             className="group inline-flex w-fit items-center gap-3 rounded-full border border-neutral-300 bg-white px-6 py-3.5 text-sm font-bold text-neutral-900 transition-all duration-300 hover:border-ivp-red hover:bg-ivp-red hover:text-white"
           >
-            Get in touch
+            Nous contacter
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-100 transition group-hover:bg-white/10">
               <ArrowUpRight
                 size={15}

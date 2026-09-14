@@ -1,6 +1,6 @@
 import { ArrowUpRight, Heart, Sparkles } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import communityImage from '../../assets/community.jpg'
+import communityImage from '../../assets/img21.jpg'
 
 export default function FinalCTA() {
   return (
@@ -27,7 +27,7 @@ export default function FinalCTA() {
           <span className="h-px w-10 bg-white/50" />
 
           <span className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
-            Make a difference
+            Faites la différence
           </span>
         </div>
 
@@ -35,15 +35,16 @@ export default function FinalCTA() {
         <div className="mt-10 grid gap-14 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
           <div>
             <h2 className="max-w-5xl font-serif text-5xl leading-[0.92] tracking-[-0.045em] sm:text-7xl lg:text-[6.5rem]">
-              Care begins
+              Prendre soin commence
               <span className="block italic font-normal text-white/80">
-                with you.
+                avec vous.
               </span>
             </h2>
 
             <p className="mt-10 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">
-              Every contribution, every helping hand and every act of compassion
-              can help create a healthier and more supported community.
+              Chaque contribution, chaque geste d’entraide et chaque acte de
+              compassion peuvent contribuer à créer une communauté en meilleure
+              santé et mieux accompagnée.
             </p>
           </div>
 
@@ -55,12 +56,12 @@ export default function FinalCTA() {
               </div>
 
               <h3 className="mt-7 font-serif text-3xl leading-tight">
-                Your support can become someone's hope.
+                Votre soutien peut devenir une source d’espoir.
               </h3>
 
               <p className="mt-4 text-sm leading-6 text-white/65">
-                Stand with IVP and help us continue bringing care closer to
-                people who need it.
+                Soutenez l’IVP et aidez-nous à continuer de rapprocher les soins
+                des personnes qui en ont besoin.
               </p>
 
               <div className="mt-8 flex flex-col gap-3">
@@ -68,7 +69,7 @@ export default function FinalCTA() {
                   to="/donate"
                   className="group inline-flex items-center justify-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-ivp-red transition duration-300 hover:bg-white/90"
                 >
-                  Donate to IVP
+                  Faire un don à l’IVP
                   <ArrowUpRight
                     size={18}
                     className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -79,7 +80,7 @@ export default function FinalCTA() {
                   to="/contact"
                   className="group inline-flex items-center justify-center gap-3 rounded-full border border-white/25 px-6 py-4 text-sm font-semibold text-white transition duration-300 hover:border-white hover:bg-white/10"
                 >
-                  Get involved
+                  S’impliquer
                   <ArrowUpRight
                     size={18}
                     className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -94,11 +95,11 @@ export default function FinalCTA() {
         <div className="mt-24 flex flex-col gap-5 border-t border-white/15 pt-7 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3 text-sm text-white/60">
             <Sparkles size={16} />
-            <span>Healthcare · Community · People</span>
+            <span>Santé · Communauté · Humanité</span>
           </div>
 
           <p className="text-sm text-white/50">
-            Together, we can reach further.
+            Ensemble, nous pouvons aller plus loin.
           </p>
         </div>
       </div>

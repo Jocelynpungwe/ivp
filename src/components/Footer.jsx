@@ -2,17 +2,19 @@ import { ArrowUpRight, Facebook, Instagram, Mail, MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const navigation = [
-  { name: 'Home', path: '/' },
-  { name: 'About IVP', path: '/about' },
-  { name: 'Gallery', path: '/gallery' },
+  { name: 'Accueil', path: '/' },
+  { name: 'À propos de l’IVP', path: '/about' },
+  { name: 'Galerie', path: '/gallery' },
   { name: 'Contact', path: '/contact' },
 ]
 
 const getInvolved = [
-  { name: 'Donate', path: '/donate' },
-  { name: 'Volunteer', path: '/contact' },
-  { name: 'Partner with us', path: '/contact' },
+  { name: 'Faire un don', path: '/donate' },
+  { name: 'Devenir bénévole', path: '/contact' },
+  { name: 'Devenir partenaire', path: '/contact' },
 ]
+
+import logo from '../assets/ivplogo.png'
 
 export default function Footer() {
   return (
@@ -26,16 +28,21 @@ export default function Footer() {
               to="/"
               className="inline-block font-serif text-5xl tracking-[-0.05em]"
             >
-              IVP
+              <img
+                src={logo}
+                alt="IVP Logo"
+                className=" h-full w-[100px] object-cover"
+              />
             </Link>
-
+            {/* 
             <div className="mt-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/40">
               Infirmières des Voies Publiques
-            </div>
+            </div> */}
 
             <p className="mt-8 max-w-md text-base leading-7 text-white/55">
-              Bringing care closer to people and communities through compassion,
-              service and a commitment to human dignity.
+              Rapprocher les soins des personnes et des communautés grâce à la
+              compassion, au service et à un engagement envers la dignité
+              humaine.
             </p>
 
             {/* Social */}
@@ -63,7 +70,7 @@ export default function Footer() {
           {/* Navigation */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/35">
-              Explore
+              Explorer
             </p>
 
             <nav className="mt-7 flex flex-col gap-4">
@@ -87,7 +94,7 @@ export default function Footer() {
           {/* Get involved */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/35">
-              Get Involved
+              S’impliquer
             </p>
 
             <nav className="mt-7 flex flex-col gap-4">
@@ -138,7 +145,7 @@ export default function Footer() {
                   to="/contact"
                   className="text-sm text-white/60 transition hover:text-white"
                 >
-                  Contact IVP
+                  Contacter l’IVP
                 </Link>
               </div>
             </div>
@@ -148,7 +155,7 @@ export default function Footer() {
               to="/donate"
               className="group mt-8 inline-flex items-center gap-3 rounded-full bg-ivp-red px-6 py-3.5 text-sm font-semibold transition duration-300 hover:bg-red-700"
             >
-              Support IVP
+              Soutenir l’IVP
               <ArrowUpRight
                 size={17}
                 className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -160,9 +167,9 @@ export default function Footer() {
         {/* Large footer statement */}
         <div className="mt-24 border-t border-white/10 pt-12">
           <h2 className="max-w-5xl font-serif text-4xl leading-[1] tracking-[-0.04em] text-white/90 sm:text-5xl lg:text-6xl">
-            Healthcare is more than treatment.
+            Les soins de santé vont au-delà du traitement.
             <span className="block text-white/35">
-              It is care, dignity and humanity.
+              Ils sont synonymes de soins, de dignité et d’humanité.
             </span>
           </h2>
         </div>
@@ -173,7 +180,7 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between lg:px-8">
           <p>
             © {new Date().getFullYear()} IVP — Infirmières des Voies Publiques.
-            All rights reserved.
+            Tous droits réservés.
           </p>
 
           <div className="flex gap-6">
@@ -181,7 +188,7 @@ export default function Footer() {
               Contact
             </Link>
 
-            <span>Made with care.</span>
+            <span>Conçu avec soin.</span>
           </div>
         </div>
       </div>

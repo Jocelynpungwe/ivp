@@ -6,9 +6,9 @@ import {
   UsersRound,
 } from 'lucide-react'
 
-import aboutMainImage from '../../assets/heroImage.jpg'
-import aboutSmallImage from '../../assets/heroImage.jpg'
-import aboutPortrait from '../../assets/heroImage.jpg'
+import aboutMainImage from '../../assets/img22.jpg'
+import aboutSmallImage from '../../assets/img2.jpg'
+import aboutPortrait from '../../assets/img21.jpg'
 
 export default function AboutHome() {
   return (
@@ -46,10 +46,10 @@ export default function AboutHome() {
                 <HeartHandshake size={18} />
               </div>
 
-              <p className="text-2xl font-bold tracking-tight">IVP</p>
+              <p className="text-2xl font-bold tracking-tight">I.V.P</p>
 
               <p className="mt-1 text-[10px] font-medium uppercase leading-4 tracking-[0.12em] text-white/70">
-                Care with purpose
+                ASBL
               </p>
             </div>
 
@@ -70,23 +70,27 @@ export default function AboutHome() {
               </span>
 
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-ivp-red">
-                About Us
+                À propos de nous.
               </p>
             </div>
 
             {/* Heading */}
             <h2 className="max-w-xl font-display text-4xl leading-[1.02] tracking-[-0.04em] sm:text-5xl lg:text-[3.7rem]">
-              United in care,
-              <br />
-              <span className="text-ivp-red">committed to people.</span>
+              Qui sommes-nous?
+              {/* <br />
+              <span className="text-ivp-red">committed to people.</span> */}
             </h2>
 
             {/* Description */}
             <p className="mt-7 max-w-xl text-base leading-8 text-ivp-muted">
-              IVP brings together healthcare, compassion and community to create
-              meaningful support for people who need it most. Through dedicated
-              care and human connection, we believe every person deserves to be
-              treated with dignity.
+              Infirmiers des Voies Publiques (IVP) est une organisation
+              congolaise à but non lucratif dédiée à la solidarité et à
+              l’amélioration de l’accès aux soins de santé. Nous fournissons des
+              soins médicaux essentiels gratuits aux communautés vulnérables,
+              avec un accent particulier sur les enfants vivant dans la rue — y
+              compris ceux abandonnés ou rejetés par leur famille, les orphelins
+              et les enfants accusés de sorcellerie — ainsi que les enfants en
+              centre de détention.
             </p>
 
             {/* Feature + Impact */}
@@ -100,12 +104,14 @@ export default function AboutHome() {
 
                   <div>
                     <h3 className="font-semibold text-neutral-900">
-                      Healthcare Support
+                      Soutien aux soins de santé
                     </h3>
 
                     <p className="mt-2 text-sm leading-6 text-ivp-muted">
-                      Providing compassionate healthcare support while helping
-                      communities access the care and resources they deserve.
+                      Beaucoup de ces enfants manquent de soutien familial et
+                      d’accès aux soins de santé de base, les rendant
+                      vulnérables à des maladies chroniques et non traitées qui
+                      peuvent avoir des conséquences mortelles en danger.
                     </p>
                   </div>
                 </div>
@@ -129,22 +135,23 @@ export default function AboutHome() {
 
                     <div>
                       <p className="text-xs font-semibold text-neutral-500">
-                        People first
+                        Les gens d’abord
                       </p>
 
                       <p className="text-[10px] text-neutral-400">
-                        Community focused
+                        Axé sur la communauté
                       </p>
                     </div>
                   </div>
 
                   {/* Number */}
                   <p className="mt-5 font-display text-3xl font-bold text-ivp-red">
-                    Together
+                    Ensemble
                   </p>
 
                   <p className="mt-1 max-w-[150px] text-xs leading-5 text-neutral-500">
-                    Building stronger communities through care and compassion.
+                    Construire des communautés plus fortes par le soin et la
+                    compassion.
                   </p>
                 </div>
               </div>
@@ -155,7 +162,7 @@ export default function AboutHome() {
               to="/about"
               className="group mt-9 inline-flex items-center gap-3 rounded-full bg-ivp-red px-7 py-4 text-sm font-bold text-white shadow-lg shadow-ivp-red/10 transition-all duration-300 hover:bg-ivp-red-dark hover:shadow-xl"
             >
-              Discover our story
+              Découvrez notre histoire
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15 transition-all duration-300 group-hover:bg-white group-hover:text-ivp-red">
                 <ArrowRight
                   size={15}
@@ -168,7 +175,7 @@ export default function AboutHome() {
             <div className="mt-10 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.16em] text-neutral-400">
               <UsersRound size={15} className="text-ivp-red" />
 
-              <span>Healthcare • Community • Dignity</span>
+              <span>Soins de santé • Communauté • Dignité</span>
             </div>
           </div>
         </div>

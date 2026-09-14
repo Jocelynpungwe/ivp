@@ -2,31 +2,35 @@ import { useState } from 'react'
 import { ArrowUpRight, Play, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-import placeholderVideo from '../../assets/placeholder-video.mp4'
-
+import placeholderVideo from '../../assets/about.mp4'
+import placeholderVideo1 from '../../assets/vid1.mp4'
+import placeholderVideo2 from '../../assets/vid2.mp4'
+import pst from '../../assets/pst.png'
 const videos = [
   {
     id: 1,
-    title: 'Care in action',
-    category: 'Featured Story',
+    title: 'Les soins en action',
+    category: 'Histoire à la une',
     description:
-      'A glimpse into the people, care and moments that inspire the work of IVP.',
+      'Un aperçu des personnes, des soins et des moments qui inspirent le travail de l’IVP.',
     video: placeholderVideo,
+    poster: pst,
   },
   {
     id: 2,
-    title: 'Community & Care',
-    category: 'Our Work',
-    description: 'Discover the human side of healthcare and community support.',
-    video: placeholderVideo,
+    title: 'Communauté et soins',
+    category: 'Notre action',
+    description:
+      'Découvrez l’aspect humain des soins de santé et du soutien communautaire.',
+    video: placeholderVideo1,
   },
   {
     id: 3,
-    title: 'People First',
-    category: 'Our Stories',
+    title: 'L’humain avant tout',
+    category: 'Nos histoires',
     description:
-      'Every person has a story. Every moment of care can make a difference.',
-    video: placeholderVideo,
+      'Chaque personne a une histoire. Chaque geste de soin peut faire la différence.',
+    video: placeholderVideo2,
   },
 ]
 
@@ -44,26 +48,27 @@ export default function StoriesHome() {
                 <span className="h-px w-8 bg-ivp-red" />
 
                 <p className="text-xs font-bold uppercase tracking-[0.22em] text-ivp-red">
-                  Stories From The Field
+                  Histoires du terrain
                 </p>
               </div>
 
               <p className="mt-6 max-w-xs text-sm leading-6 text-ivp-muted">
-                A closer look at the people, moments and work behind our
-                mission.
+                Découvrez de plus près les personnes, les moments et les actions
+                qui font vivre notre mission.
               </p>
             </div>
 
             <div>
               <h2 className="max-w-4xl font-display text-4xl leading-[1.02] tracking-[-0.045em] sm:text-5xl lg:text-[4.7rem]">
-                See care
+                Voyez les soins
                 <br />
-                <span className="text-ivp-red">in action.</span>
+                <span className="text-ivp-red">en action.</span>
               </h2>
 
               <p className="mt-7 max-w-2xl text-base leading-8 text-ivp-muted sm:text-lg">
-                Real stories have the power to show what numbers cannot. Explore
-                the moments that bring the work of IVP to life.
+                Les histoires réelles ont le pouvoir de montrer ce que les
+                chiffres ne peuvent pas toujours exprimer. Découvrez les moments
+                qui donnent vie au travail de l’IVP.
               </p>
             </div>
           </div>
@@ -73,6 +78,7 @@ export default function StoriesHome() {
             <div className="aspect-video">
               <video
                 src={videos[0].video}
+                poster={videos[0].poster}
                 muted
                 playsInline
                 controls
@@ -104,7 +110,7 @@ export default function StoriesHome() {
                   type="button"
                   onClick={() => setActiveVideo(videos[0])}
                   className="pointer-events-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-neutral-950 transition duration-300 hover:scale-105 hover:bg-ivp-red hover:text-white"
-                  aria-label="Play featured video"
+                  aria-label="Lire la vidéo principale"
                 >
                   <Play size={19} fill="currentColor" />
                 </button>
@@ -160,11 +166,11 @@ export default function StoriesHome() {
           <div className="mt-12 flex flex-col justify-between gap-6 border-t border-neutral-200 pt-8 sm:flex-row sm:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-400">
-                Stories matter
+                Les histoires comptent
               </p>
 
               <p className="mt-2 text-sm text-ivp-muted">
-                Follow the journey and discover more about IVP.
+                Suivez notre parcours et découvrez-en davantage sur l’IVP.
               </p>
             </div>
 
@@ -172,7 +178,7 @@ export default function StoriesHome() {
               to="/gallery"
               className="group inline-flex w-fit items-center gap-3 rounded-full bg-neutral-950 px-6 py-3.5 text-sm font-bold text-white transition duration-300 hover:bg-ivp-red"
             >
-              View our gallery
+              Voir notre galerie
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 transition group-hover:bg-white group-hover:text-ivp-red">
                 <ArrowUpRight
                   size={15}
@@ -191,7 +197,7 @@ export default function StoriesHome() {
             type="button"
             onClick={() => setActiveVideo(null)}
             className="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white hover:text-black"
-            aria-label="Close video"
+            aria-label="Fermer la vidéo"
           >
             <X size={20} />
           </button>
