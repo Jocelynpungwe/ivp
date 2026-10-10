@@ -1,67 +1,61 @@
-import { Link } from 'react-router-dom'
-import { ArrowRight, HeartPulse, HandHeart, UsersRound } from 'lucide-react'
-import SectionHeading from '../components/SectionHeading'
 import HeroHome from '../components/Home/HeroHome'
+import TwoWays from '../components/Home/TwoWays'
+import ChapterSwitcher from '../components/Home/ChapterSwitcher'
+import ChapterDivider from '../components/Home/ChapterDivider'
 import AboutHome from '../components/Home/AboutHome'
-import WhatWeDo from '../components/Home/WhatWeDo'
-import WhoWeHelp from '../components/Home/HowWeHelp'
-import ImpactHome from '../components/Home/ImpactHome'
-import StoriesHome from '../components/Home/StoriesHome'
-import HowYouCanHelp from '../components/Home/HowYouCanHelp'
-import TrustPartners from '../components/Home/TrustPartners'
-import FinalCTA from '../components/Home/FinalCTA'
-
-const programs = [
-  [
-    'Soins communautaires',
-    'Distribuer les médicaments de première nécessité aux orphelinats.',
-    HeartPulse,
-  ],
-  [
-    'Soutien compatissant',
-    'Prendre en charge les frais médicaux desdits enfants pour les cas qui nécessitent les soins dans une institution hospitlière.',
-    HandHeart,
-  ],
-  [
-    'Soins infirmiers en action',
-    'Implanter une représentation dans les villes où se trouve un plus grand nombre des enfants en situation de rue.',
-    UsersRound,
-  ],
-]
+import IVPMission from '../components/Home/IVPMission'
+import IVPAction from '../components/Home/IVPAction'
+import IVPImpact from '../components/Home/IVPImpact'
+import IVPGetInvolved from '../components/Home/IVPGetInvolved'
+import MFShowcase from '../components/Home/MFShowcase'
+import MFApproach from '../components/Home/MFApproach'
+import DualCTA from '../components/Home/DualCTA'
+import useDocumentMeta from '../hooks/useDocumentMeta'
 
 export default function Home() {
+  useDocumentMeta(
+    'IVP & MF Médical — Soins infirmiers solidaires et soins esthétiques',
+    'IVP apporte des soins infirmiers aux enfants en situation de rue. MF Médical propose des soins esthétiques et de bien-être à Bruxelles.',
+  )
   return (
     <>
       <HeroHome />
+      <TwoWays />
 
-      <AboutHome />
-      <section className="container-page py-24">
-        <SectionHeading
-          eyebrow="Mission"
-          title="Notre mission"
-          text="Administrer les soins infirmiers auxdits enfant"
+      <div>
+        <ChapterSwitcher />
+
+        {/* ===== CHAPITRE 01 — IVP ===== */}
+        <ChapterDivider
+          id="chapitre-ivp"
+          theme="ivp"
+          number="01"
+          kicker="IVP · Mission solidaire"
+          title="Soigner ceux"
+          accent="que l’on oublie."
+          text="Infirmières des Voies Publiques apporte des soins et un soutien aux enfants et aux communautés vulnérables."
         />
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
-          {programs.map(([title, text, Icon]) => (
-            <article
-              key={title}
-              className="rounded-3xl border border-neutral-200 p-7 transition hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="mb-12 flex h-12 w-12 items-center justify-center rounded-2xl bg-ivp-red-soft text-ivp-red">
-                <Icon size={23} />
-              </div>
-              <h3 className="font-display text-2xl">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-ivp-muted">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-      <WhatWeDo />
-      <WhoWeHelp />
-      <ImpactHome />
-      <StoriesHome />
-      <HowYouCanHelp />
-      <FinalCTA />
+        <AboutHome />
+        <IVPMission />
+        <IVPAction />
+        <IVPImpact />
+        <IVPGetInvolved />
+
+        {/* ===== CHAPITRE 02 — MF MÉDICAL ===== */}
+        <ChapterDivider
+          id="chapitre-mf"
+          theme="mf"
+          number="02"
+          kicker="MF Médical · Soins esthétiques & bien-être"
+          title="Sublimez votre"
+          accent="beauté naturelle."
+          text="Infirmière esthéticienne diplômée en Belgique : professionnalisme, sécurité et douceur, à Bruxelles et environs."
+        />
+        <MFShowcase />
+        <MFApproach />
+      </div>
+
+      <DualCTA />
     </>
   )
 }

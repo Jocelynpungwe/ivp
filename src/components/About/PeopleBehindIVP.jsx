@@ -1,186 +1,97 @@
-import { ArrowUpRight, Heart, UsersRound } from 'lucide-react'
+import { ArrowUpRight, HandHeart, Stethoscope, UsersRound } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-import peopleImage from '../../assets/about-hero.jpg'
-import eldersImage from '../../assets/elders.jpg'
+import nursesImage from '../../assets/img21.jpg'
+import medicationImage from '../../assets/medication.jpg'
+import groupImage from '../../assets/community.jpg'
 
 const people = [
   {
-    number: '01',
-    title: 'Nurses',
-    description:
-      'Healthcare professionals bringing knowledge, compassion and hands-on care into the community.',
+    icon: Stethoscope,
+    title: 'Infirmières',
+    description: 'Des professionnelles de santé qui apportent savoir-faire, compassion et soins concrets au cœur de la communauté.',
   },
   {
-    number: '02',
-    title: 'Volunteers',
-    description:
-      'People who give their time, energy and skills to support the work of IVP.',
+    icon: HandHeart,
+    title: 'Bénévoles',
+    description: 'Des personnes qui donnent leur temps, leur énergie et leurs compétences pour soutenir l’action de l’IVP.',
   },
   {
-    number: '03',
-    title: 'Community',
-    description:
-      'The people, families and communities whose participation makes meaningful care possible.',
+    icon: UsersRound,
+    title: 'Communauté',
+    description: 'Les personnes, les familles et les communautés dont la participation rend possible un soin qui compte.',
   },
 ]
 
 export default function PeopleBehindIVP() {
   return (
-    <section className="overflow-hidden bg-white py-24 sm:py-32 lg:py-40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="h-px w-10 bg-ivp-red" />
-
-              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-ivp-red">
-                The People Behind IVP
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="max-w-5xl font-serif text-5xl leading-[0.92] tracking-[-0.045em] text-ivp-black sm:text-6xl lg:text-7xl">
-              The people
-              <span className="block italic font-normal text-ivp-red">
-                behind the care.
-              </span>
-            </h2>
-          </div>
-        </div>
-
-        {/* Intro */}
-        <div className="mt-10 grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-          <div />
-
-          <p className="max-w-2xl text-base leading-8 text-gray-500 sm:text-lg">
-            Behind every moment of care is a person willing to show up, listen,
-            serve and make a difference. IVP's work is made possible through the
-            dedication of people who believe that every life deserves compassion
-            and dignity.
+    <section className="overflow-hidden bg-white py-24 sm:py-32 lg:py-40" aria-labelledby="personnes">
+      <div className="container-page">
+        <div className="reveal mx-auto max-w-3xl text-center">
+          <p className="section-label justify-center text-ivp-red">Les personnes derrière l’IVP</p>
+          <h2 id="personnes" className="mt-7 font-display text-4xl leading-[1.02] tracking-[-0.035em] text-ivp-black sm:text-6xl">
+            Les personnes <span className="italic text-ivp-red">derrière le soin.</span>
+          </h2>
+          <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-gray-500 sm:text-lg">
+            Derrière chaque moment de soin, il y a une personne prête à être
+            présente, à écouter, à servir et à faire la différence. L’action de
+            l’IVP est portée par des personnes convaincues que chaque vie mérite
+            compassion et dignité.
           </p>
         </div>
 
-        {/* Photography */}
-        <div className="mt-20 grid gap-5 lg:grid-cols-[1.45fr_0.55fr]">
-          {/* Main image */}
-          <div className="group relative overflow-hidden rounded-[2rem]">
-            <img
-              src={peopleImage}
-              alt="IVP nurse providing care to children in the community"
-              className="h-[560px] w-full object-cover transition duration-[1200ms] group-hover:scale-[1.025] sm:h-[680px]"
-            />
+        {/* Mosaic */}
+        <div className="reveal mx-auto mt-14 grid max-w-6xl gap-4 md:h-[440px] md:grid-cols-12 md:grid-rows-2">
+          <figure className="group relative overflow-hidden rounded-[1.5rem] md:col-span-5 md:row-span-2 md:min-h-0">
+            <img src={nursesImage} alt="Une infirmière de l’IVP entourée d’enfants" loading="lazy" className="h-[280px] w-full object-cover object-[12%_50%] transition duration-[1200ms] group-hover:scale-105 md:h-full" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <figcaption className="absolute inset-x-7 bottom-7 text-white">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/65">Le soin en action</p>
+              <p className="mt-2 font-display text-xl leading-tight sm:text-2xl">Être présentes pour celles et ceux qui ont besoin de nous.</p>
+            </figcaption>
+          </figure>
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-transparent" />
-
-            {/* Caption */}
-            <div className="absolute bottom-7 left-7 right-7 flex items-end justify-between gap-6 text-white sm:bottom-9 sm:left-9 sm:right-9">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/60">
-                  Care in action
-                </p>
-
-                <p className="mt-2 max-w-md font-serif text-2xl leading-tight sm:text-3xl">
-                  Showing up for the people who need us.
-                </p>
-              </div>
-
-              <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/30 sm:flex">
-                <ArrowUpRight size={18} />
-              </div>
-            </div>
-          </div>
-
-          {/* Secondary image */}
-          <div className="group relative overflow-hidden rounded-[2rem] bg-[#f5f3f0]">
-            <img
-              src={eldersImage}
-              alt="IVP healthcare support in the community"
-              className="h-[420px] w-full object-cover transition duration-[1200ms] group-hover:scale-[1.03] lg:h-full"
-            />
-
+          <figure className="group relative overflow-hidden rounded-[1.5rem] md:col-span-7 md:min-h-0">
+            <img src={groupImage} alt="L’équipe de l’IVP réunie avec la communauté" loading="lazy" className="h-[200px] w-full object-cover transition duration-[1200ms] group-hover:scale-105 md:h-full" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+            <figcaption className="absolute bottom-6 left-7 font-display text-xl text-white sm:text-2xl">Une équipe, une communauté.</figcaption>
+          </figure>
 
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-ivp-red">
-                <Heart size={18} fill="currentColor" />
-              </div>
-
-              <p className="mt-5 font-serif text-2xl leading-tight text-white">
-                Care that sees the whole person.
-              </p>
-            </div>
-          </div>
+          <figure className="group relative overflow-hidden rounded-[1.5rem] md:col-span-7 md:min-h-0">
+            <img src={medicationImage} alt="Distribution de médicaments par l’IVP" loading="lazy" className="h-[200px] w-full object-cover transition duration-[1200ms] group-hover:scale-105 md:h-full" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+            <figcaption className="absolute bottom-6 left-7 font-display text-xl text-white sm:text-2xl">Un soin qui voit la personne dans sa globalité.</figcaption>
+          </figure>
         </div>
 
-        {/* People categories */}
-        <div className="mt-20 border-t border-gray-200">
-          {people.map((person) => (
-            <div
-              key={person.number}
-              className="group border-b border-gray-200 py-9 transition duration-500 hover:bg-[#f8f6f3] sm:py-11"
-            >
-              <div className="grid gap-6 lg:grid-cols-[100px_1fr_1.3fr_auto] lg:items-center lg:gap-10">
-                {/* Number */}
-                <span className="font-serif text-2xl text-ivp-red/40 transition duration-300 group-hover:text-ivp-red">
-                  {person.number}
+        {/* Roles */}
+        <div className="reveal mt-6 grid gap-4 md:grid-cols-3">
+          {people.map(({ icon: Icon, title, description }, i) => (
+            <article key={title} className="group rounded-[1.75rem] border border-gray-200 p-8 transition duration-500 hover:-translate-y-1.5 hover:border-ivp-red hover:bg-ivp-red hover:text-white hover:shadow-2xl hover:shadow-ivp-red/20">
+              <div className="flex items-center justify-between">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ivp-red-soft text-ivp-red transition duration-500 group-hover:bg-white/15 group-hover:text-white">
+                  <Icon size={22} strokeWidth={1.5} />
                 </span>
-
-                {/* Title */}
-                <h3 className="font-serif text-3xl tracking-[-0.025em] text-ivp-black sm:text-4xl">
-                  {person.title}
-                </h3>
-
-                {/* Description */}
-                <p className="max-w-xl text-sm leading-7 text-gray-500 sm:text-base">
-                  {person.description}
-                </p>
-
-                {/* Icon */}
-                <div className="hidden h-11 w-11 items-center justify-center rounded-full border border-gray-200 transition duration-300 group-hover:border-ivp-red group-hover:bg-ivp-red group-hover:text-white lg:flex">
-                  <ArrowUpRight
-                    size={17}
-                    className="transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </div>
+                <span className="font-display text-2xl text-ivp-red/40 transition group-hover:text-white/50">0{i + 1}</span>
               </div>
-            </div>
+              <h3 className="mt-10 font-display text-3xl tracking-[-0.02em]">{title}</h3>
+              <p className="mt-3 text-sm leading-7 text-gray-500 transition duration-500 group-hover:text-white/80">{description}</p>
+            </article>
           ))}
         </div>
 
-        {/* Bottom callout */}
-        <div className="mt-20 rounded-[2rem] bg-ivp-red px-7 py-12 text-white sm:px-12 sm:py-14 lg:px-16">
-          <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div className="flex gap-5">
-              <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 sm:flex">
-                <UsersRound size={20} strokeWidth={1.5} />
-              </div>
-
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/50">
-                  Together
-                </p>
-
-                <h3 className="mt-3 max-w-3xl font-serif text-3xl leading-tight tracking-[-0.025em] sm:text-4xl">
-                  Change begins when people choose to care.
-                </h3>
-              </div>
-            </div>
-
-            <Link
-              to="/contact"
-              className="group inline-flex w-fit items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-ivp-red transition duration-300 hover:bg-white/90"
-            >
-              Get involved
-              <ArrowUpRight
-                size={17}
-                className="transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-              />
-            </Link>
+        {/* Callout */}
+        <div className="reveal mt-16 flex flex-col items-start justify-between gap-8 rounded-[2rem] bg-[#151313] px-8 py-12 text-white sm:px-12 lg:flex-row lg:items-center">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-ivp-red">Ensemble</p>
+            <h3 className="mt-3 max-w-2xl font-display text-3xl leading-tight tracking-[-0.025em] sm:text-4xl">
+              Le changement commence quand on choisit de prendre soin.
+            </h3>
           </div>
+          <Link to="/contact" className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-ivp-red px-7 py-4 text-sm font-bold transition duration-300 hover:bg-ivp-red-dark">
+            S’impliquer
+            <ArrowUpRight size={17} className="transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          </Link>
         </div>
       </div>
     </section>

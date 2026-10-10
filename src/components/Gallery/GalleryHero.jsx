@@ -66,7 +66,7 @@ export default function GalleryHero() {
             </p>
 
             <Link
-              to="/donate"
+              to="/don"
               className="group inline-flex w-fit items-center gap-3 rounded-full bg-ivp-red px-6 py-3.5 text-sm font-semibold text-white transition duration-300 hover:bg-white hover:text-ivp-red"
             >
               Support the work

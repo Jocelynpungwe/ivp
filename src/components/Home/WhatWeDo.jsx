@@ -151,7 +151,7 @@ export default function WhatWeDo() {
           </p>
 
           <Link
-            to="/about"
+            to="/a-propos"
             className="group inline-flex w-fit items-center gap-3 rounded-full bg-ivp-red px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-ivp-red-dark"
           >
             Découvrez notre action

@@ -1,156 +1,72 @@
-import {
-  ArrowUpRight,
-  Heart,
-  HandHeart,
-  UsersRound,
-  ShieldCheck,
-  Sparkles,
-} from 'lucide-react'
+import { HandHeart, Heart, ShieldCheck, Sparkles, UsersRound } from 'lucide-react'
 
 const values = [
   {
-    number: '01',
     title: 'Compassion',
-    description:
-      'We approach every person with empathy, patience and genuine concern for their wellbeing.',
+    description: 'Nous accueillons chaque personne avec empathie, patience et un réel souci de son bien-être.',
     icon: Heart,
   },
   {
-    number: '02',
-    title: 'Dignity',
-    description:
-      'Every person deserves to be seen, heard and treated with respect, regardless of their circumstances.',
+    title: 'Dignité',
+    description: 'Chaque personne mérite d’être vue, entendue et respectée, quelles que soient ses circonstances.',
     icon: HandHeart,
   },
   {
-    number: '03',
-    title: 'Community',
-    description:
-      'We believe meaningful care begins by understanding and working alongside the communities we serve.',
+    title: 'Communauté',
+    description: 'Un soin qui compte commence par comprendre les communautés que nous servons et par travailler à leurs côtés.',
     icon: UsersRound,
   },
   {
-    number: '04',
-    title: 'Accessibility',
-    description:
-      'We strive to bring support closer to people and help reduce barriers that stand between communities and care.',
+    title: 'Accessibilité',
+    description: 'Nous nous efforçons de rapprocher le soutien des personnes et de réduire les obstacles qui les séparent des soins.',
     icon: ShieldCheck,
   },
   {
-    number: '05',
-    title: 'Commitment',
-    description:
-      'We remain dedicated to serving with consistency, responsibility and a long-term commitment to positive change.',
+    title: 'Engagement',
+    description: 'Nous restons dévoués, avec constance et responsabilité, pour un changement positif et durable.',
     icon: Sparkles,
   },
 ]
 
 export default function OurValues() {
   return (
-    <section className="overflow-hidden bg-[#151313] py-24 text-white sm:py-32 lg:py-40">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="h-px w-10 bg-ivp-red" />
-
-              <span className="text-xs font-semibold uppercase tracking-[0.28em] text-white/45">
-                Our Values
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="max-w-4xl font-serif text-5xl leading-[0.95] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              The principles
-              <span className="block italic font-normal text-white/45">
-                behind the care.
-              </span>
-            </h2>
-          </div>
-        </div>
-
-        {/* Intro */}
-        <div className="mt-10 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <div />
-
-          <p className="max-w-2xl text-base leading-8 text-white/50 sm:text-lg">
-            The way we care matters just as much as the care itself. These
-            principles guide how we connect with people, work within communities
-            and approach the work we do.
+    <section className="bg-[#151313] py-24 text-white sm:py-32 lg:py-40" aria-labelledby="valeurs">
+      <div className="container-page grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+        {/* Sticky intro */}
+        <div className="reveal lg:sticky lg:top-32 lg:self-start">
+          <p className="section-label text-ivp-red">Nos valeurs</p>
+          <h2 id="valeurs" className="mt-7 font-display text-5xl leading-[0.98] tracking-[-0.04em] sm:text-6xl">
+            Les principes
+            <span className="block italic text-white/45">derrière le soin.</span>
+          </h2>
+          <p className="mt-8 max-w-md text-base leading-8 text-white/55">
+            La manière de soigner compte autant que le soin lui-même. Ces
+            principes guident notre rencontre avec les personnes, notre travail
+            au sein des communautés et notre façon d’agir.
+          </p>
+          <p className="mt-10 border-l-2 border-ivp-red pl-5 font-display text-xl leading-8 text-white/80">
+            « La qualité de nos soins commence par le regard que nous portons
+            sur les personnes que nous servons. »
           </p>
         </div>
 
-        {/* Values list */}
-        <div className="mt-20 border-t border-white/10">
-          {values.map((value) => {
-            const Icon = value.icon
-
-            return (
-              <div
-                key={value.number}
-                className="group border-b border-white/10 transition duration-500 hover:bg-white/[0.035]"
-              >
-                <div className="grid gap-7 px-0 py-9 sm:py-11 lg:grid-cols-[100px_1fr_1.2fr_60px] lg:items-center lg:gap-10">
-                  {/* Number */}
-                  <div>
-                    <span className="font-serif text-2xl text-white/20 transition duration-500 group-hover:text-ivp-red">
-                      {value.number}
-                    </span>
-                  </div>
-
-                  {/* Title + icon */}
-                  <div className="flex items-center gap-5">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/10 transition duration-500 group-hover:border-ivp-red group-hover:bg-ivp-red">
-                      <Icon
-                        size={19}
-                        strokeWidth={1.5}
-                        className="text-white/50 transition duration-500 group-hover:text-white"
-                      />
-                    </div>
-
-                    <h3 className="font-serif text-3xl tracking-[-0.025em] transition duration-500 group-hover:translate-x-1 sm:text-4xl">
-                      {value.title}
-                    </h3>
-                  </div>
-
-                  {/* Description */}
-                  <div>
-                    <p className="max-w-xl text-sm leading-7 text-white/40 transition duration-500 group-hover:text-white/65 sm:text-base">
-                      {value.description}
-                    </p>
-                  </div>
-
-                  {/* Arrow */}
-                  <div className="hidden lg:flex lg:justify-end">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 transition duration-500 group-hover:border-white/30 group-hover:bg-ivp-red">
-                      <ArrowUpRight
-                        size={17}
-                        className="text-white/30 transition duration-500 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      />
-                    </div>
-                  </div>
+        {/* Values */}
+        <ol className="reveal border-t border-white/10">
+          {values.map(({ title, description, icon: Icon }, i) => (
+            <li key={title} className="group grid gap-5 border-b border-white/10 py-9 transition duration-500 hover:bg-white/[0.04] sm:grid-cols-[70px_1fr] sm:gap-8 sm:px-4">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full border border-white/15 text-white/60 transition duration-500 group-hover:border-ivp-red group-hover:bg-ivp-red group-hover:text-white">
+                <Icon size={22} strokeWidth={1.4} />
+              </span>
+              <div>
+                <div className="flex items-baseline gap-4">
+                  <span className="font-display text-sm text-ivp-red">0{i + 1}</span>
+                  <h3 className="font-display text-3xl tracking-[-0.02em] transition duration-500 group-hover:translate-x-1 sm:text-4xl">{title}</h3>
                 </div>
+                <p className="mt-3 max-w-xl text-sm leading-7 text-white/50 transition duration-500 group-hover:text-white/75 sm:text-base">{description}</p>
               </div>
-            )
-          })}
-        </div>
-
-        {/* Bottom statement */}
-        <div className="mt-20 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div>
-            <p className="max-w-3xl font-serif text-3xl leading-tight tracking-[-0.025em] text-white/80 sm:text-4xl">
-              “The quality of our care begins with the way we see the people we
-              serve.”
-            </p>
-          </div>
-
-          <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/30">
-            <span className="h-px w-8 bg-ivp-red" />
-            Our commitment
-          </div>
-        </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )

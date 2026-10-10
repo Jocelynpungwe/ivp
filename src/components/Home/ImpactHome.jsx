@@ -149,7 +149,7 @@ export default function ImpactHome() {
             </div>
 
             <Link
-              to="/about"
+              to="/a-propos"
               className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-ivp-red transition-all duration-300 hover:bg-neutral-950 hover:text-white"
             >
               Découvrez notre impact

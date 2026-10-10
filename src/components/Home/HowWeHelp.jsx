@@ -153,7 +153,7 @@ export default function WhoWeHelp() {
           </div>
 
           <Link
-            to="/about"
+            to="/a-propos"
             className="group inline-flex w-fit items-center gap-3 rounded-full bg-neutral-950 px-6 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-ivp-red"
           >
             En savoir plus sur IVP

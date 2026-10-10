@@ -65,7 +65,7 @@ export default function ContactHero() {
             </Link>
 
             <Link
-              to="/donate"
+              to="/don"
               className="group inline-flex items-center justify-between gap-8 rounded-full border border-white/25 bg-white/5 px-6 py-4 text-sm font-semibold text-white backdrop-blur-md transition duration-300 hover:bg-white hover:text-ivp-black"
             >
               Support IVP

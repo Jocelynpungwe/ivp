@@ -8,7 +8,7 @@ const waysToHelp = [
     title: 'Faire un don',
     description:
       'Votre contribution peut aider à soutenir des soins de santé empreints de compassion et un accompagnement significatif pour les personnes qui en ont besoin.',
-    link: '/donate',
+    link: '/don',
     featured: true,
   },
   {
@@ -110,7 +110,7 @@ export default function HowYouCanHelp() {
 
             {/* CTA */}
             <Link
-              to="/donate"
+              to="/don"
               className="group/button relative mt-10 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-ivp-red transition-all duration-300 hover:bg-neutral-950 hover:text-white"
             >
               Faire un don à l’IVP

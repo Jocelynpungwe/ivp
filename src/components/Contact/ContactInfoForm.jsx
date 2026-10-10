@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import {
   ArrowUpRight,
   CheckCircle2,
@@ -8,7 +9,10 @@ import {
   MapPin,
 } from 'lucide-react'
 
+const SOINS_REASON = 'Rendez-vous — soins esthétiques (MF Médical)'
+
 const contactReasons = [
+  SOINS_REASON,
   'General Inquiry',
   'Volunteer',
   'Partnership',
@@ -18,11 +22,12 @@ const contactReasons = [
 ]
 
 export default function ContactInfoForm() {
+  const [searchParams] = useSearchParams()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
-    reason: '',
+    reason: searchParams.get('sujet') === 'soins' ? SOINS_REASON : '',
     message: '',
   })
 

@@ -10,26 +10,26 @@ import medicationImage from '../../assets/medication.jpg'
 const stories = [
   {
     id: 1,
-    category: 'Community Care',
-    title: 'Bringing care closer to the community.',
+    category: 'Soins communautaires',
+    title: 'Rapprocher les soins de la communauté.',
     description:
-      'When healthcare reaches people where they live, trust begins to grow. IVP believes meaningful care starts with meeting people where they are.',
+      'Quand les soins atteignent les gens là où ils vivent, la confiance naît. L’IVP croit qu’un soin qui compte commence par aller à la rencontre des personnes.',
     image: childrenImage,
   },
   {
     id: 2,
-    category: 'Health Support',
-    title: 'Small moments can make a lasting difference.',
+    category: 'Soutien santé',
+    title: 'De petits moments peuvent changer durablement les choses.',
     description:
-      'A conversation, a helping hand, or access to basic healthcare can become an important moment of hope for someone facing difficult circumstances.',
+      'Une conversation, une main tendue ou l’accès aux soins de base peuvent devenir un moment d’espoir pour quelqu’un qui traverse une épreuve.',
     image: medicationImage,
   },
   {
     id: 3,
-    category: 'Human Connection',
-    title: 'Care begins with seeing the person.',
+    category: 'Lien humain',
+    title: 'Le soin commence par voir la personne.',
     description:
-      'Beyond treatment is a simple human responsibility: listening, understanding and treating every person with dignity.',
+      'Au-delà du traitement, il y a une responsabilité humaine toute simple : écouter, comprendre et traiter chaque personne avec dignité.',
     image: communityImage,
   },
 ]
@@ -45,27 +45,27 @@ export default function StoriesImpact() {
               HEADER
           ===================================================== */}
 
-          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <div className="reveal grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
               <div className="flex items-center gap-3">
                 <span className="h-px w-10 bg-ivp-red" />
 
                 <span className="text-xs font-semibold uppercase tracking-[0.28em] text-ivp-red">
-                  Stories & Impact
+                  Témoignages & impact
                 </span>
               </div>
 
               <p className="mt-7 max-w-xs text-sm leading-7 text-gray-500">
-                Behind every initiative, there are people, families and
-                communities whose lives remind us why this work matters.
+                Derrière chaque action, il y a des personnes, des familles et
+                des communautés qui nous rappellent pourquoi ce travail compte.
               </p>
             </div>
 
             <div>
               <h2 className="max-w-5xl font-serif text-5xl leading-[0.92] tracking-[-0.05em] text-ivp-black sm:text-6xl lg:text-8xl">
-                The difference
+                La différence
                 <span className="block italic font-normal text-ivp-red">
-                  is measured in people.
+                  se mesure en personnes.
                 </span>
               </h2>
             </div>
@@ -75,12 +75,12 @@ export default function StoriesImpact() {
               FEATURED STORY
           ===================================================== */}
 
-          <div className="mt-20 grid overflow-hidden rounded-[2rem] bg-white lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="reveal mt-20 grid overflow-hidden rounded-[2rem] bg-white lg:grid-cols-[1.2fr_0.8fr]">
             {/* Image */}
             <div className="group relative min-h-[480px] overflow-hidden sm:min-h-[600px] lg:min-h-[680px]">
               <img
                 src={featuredImage}
-                alt="IVP nurse providing care to children in the community"
+                alt="Une infirmière de l’IVP auprès des enfants de la communauté"
                 className="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] group-hover:scale-[1.025]"
               />
 
@@ -89,7 +89,7 @@ export default function StoriesImpact() {
               {/* Image label */}
               <div className="absolute left-7 top-7 sm:left-9 sm:top-9">
                 <span className="rounded-full border border-white/30 bg-black/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-                  Featured story
+                  À la une
                 </span>
               </div>
 
@@ -98,12 +98,12 @@ export default function StoriesImpact() {
                 type="button"
                 onClick={() =>
                   setActiveStory({
-                    title: 'Stories from the field',
+                    title: 'Histoires du terrain',
                     video: true,
                   })
                 }
                 className="absolute right-7 top-7 flex h-14 w-14 items-center justify-center rounded-full bg-white text-ivp-red shadow-xl transition duration-300 hover:scale-105 sm:right-9 sm:top-9"
-                aria-label="Play story video"
+                aria-label="Lire la vidéo"
               >
                 <Play size={19} fill="currentColor" className="ml-0.5" />
               </button>
@@ -111,11 +111,11 @@ export default function StoriesImpact() {
               {/* Bottom caption */}
               <div className="absolute bottom-7 left-7 right-7 sm:bottom-9 sm:left-9 sm:right-9">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/60">
-                  Care in action
+                  Le soin en action
                 </p>
 
                 <h3 className="mt-3 max-w-2xl font-serif text-3xl leading-tight tracking-[-0.025em] text-white sm:text-4xl lg:text-5xl">
-                  Showing up for the people who need us.
+                  Être présentes pour celles et ceux qui ont besoin de nous.
                 </h3>
               </div>
             </div>
@@ -128,28 +128,29 @@ export default function StoriesImpact() {
                 </div>
 
                 <p className="mt-10 text-xs font-semibold uppercase tracking-[0.25em] text-ivp-red">
-                  Why it matters
+                  Pourquoi c’est important
                 </p>
 
                 <h3 className="mt-4 font-serif text-3xl leading-[1.05] tracking-[-0.03em] text-ivp-black sm:text-4xl">
-                  Healthcare is about more than treatment.
+                  La santé, c’est plus que le traitement.
                 </h3>
 
                 <div className="mt-7 space-y-5 text-sm leading-7 text-gray-500 sm:text-base">
                   <p>
-                    For many communities, access to healthcare can be
-                    complicated by distance, resources and circumstances.
+                    Pour de nombreuses communautés, l’accès aux soins est
+                    compliqué par la distance, le manque de moyens et les
+                    circonstances de vie.
                   </p>
 
                   <p>
-                    IVP's vision is rooted in bringing compassionate care closer
-                    to people while creating an environment where individuals
-                    feel seen, heard and respected.
+                    La vision de l’IVP : rapprocher des soins bienveillants des
+                    personnes, dans un cadre où chacun se sent vu, entendu et
+                    respecté.
                   </p>
 
                   <p>
-                    Every visit, conversation and act of support is an
-                    opportunity to create a meaningful human connection.
+                    Chaque visite, chaque conversation, chaque geste de soutien
+                    est une occasion de créer un vrai lien humain.
                   </p>
                 </div>
               </div>
@@ -158,11 +159,11 @@ export default function StoriesImpact() {
                 <div className="flex items-center justify-between gap-5">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-                      Our belief
+                      Notre conviction
                     </p>
 
                     <p className="mt-2 font-serif text-xl text-ivp-black">
-                      Every person deserves compassionate care.
+                      Chaque personne mérite des soins bienveillants.
                     </p>
                   </div>
 
@@ -178,22 +179,22 @@ export default function StoriesImpact() {
               QUOTE
           ===================================================== */}
 
-          <div className="mx-auto max-w-4xl py-24 text-center sm:py-32">
+          <div className="reveal mx-auto max-w-4xl py-24 text-center sm:py-32">
             <Quote size={38} strokeWidth={1} className="mx-auto text-ivp-red" />
 
             <blockquote className="mt-7 font-serif text-3xl leading-tight tracking-[-0.025em] text-ivp-black sm:text-4xl lg:text-5xl">
-              “When care reaches the community,
+              « Quand le soin atteint la communauté,
               <span className="italic font-normal text-ivp-red">
                 {' '}
-                hope has a place to grow.
+                l’espoir a de la place pour grandir.
               </span>
-              ”
+              »
             </blockquote>
 
             <div className="mx-auto mt-8 h-px w-12 bg-gray-300" />
 
             <p className="mt-5 text-xs font-semibold uppercase tracking-[0.25em] text-gray-400">
-              The IVP approach
+              L’approche de l’IVP
             </p>
           </div>
 
@@ -205,19 +206,19 @@ export default function StoriesImpact() {
             <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-ivp-red">
-                  From the field
+                  Sur le terrain
                 </p>
 
                 <h3 className="mt-3 font-serif text-3xl tracking-[-0.03em] text-ivp-black sm:text-4xl">
-                  Moments that matter.
+                  Des moments qui comptent.
                 </h3>
               </div>
 
               <Link
-                to="/gallery"
+                to="/galerie"
                 className="group inline-flex w-fit items-center gap-2 text-sm font-semibold text-ivp-black"
               >
-                Explore the gallery
+                Voir la galerie
                 <ArrowUpRight
                   size={17}
                   className="transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
@@ -225,7 +226,7 @@ export default function StoriesImpact() {
               </Link>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="reveal grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {stories.map((story, index) => (
                 <article
                   key={story.id}
@@ -279,7 +280,7 @@ export default function StoriesImpact() {
                       onClick={() => setActiveStory(story)}
                       className="mt-7 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-ivp-black"
                     >
-                      Read story
+                      Lire l’histoire
                       <ArrowUpRight
                         size={15}
                         className="transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -295,27 +296,27 @@ export default function StoriesImpact() {
               IMPACT STATEMENT
           ===================================================== */}
 
-          <div className="mt-20 overflow-hidden rounded-[2rem] bg-ivp-red px-7 py-14 text-white sm:px-12 sm:py-16 lg:px-16">
+          <div className="reveal mt-20 overflow-hidden rounded-[2rem] bg-ivp-red px-7 py-14 text-white sm:px-12 sm:py-16 lg:px-16">
             <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/50">
-                  The bigger picture
+                  Vue d’ensemble
                 </p>
 
                 <h3 className="mt-4 max-w-4xl font-serif text-4xl leading-[0.98] tracking-[-0.04em] sm:text-5xl lg:text-6xl">
-                  One act of care can become
+                  Un seul geste de soin peut devenir
                   <span className="italic font-normal">
                     {' '}
-                    a ripple of change.
+                    une vague de changement.
                   </span>
                 </h3>
               </div>
 
               <Link
-                to="/donate"
+                to="/don"
                 className="group inline-flex w-fit items-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-ivp-red transition duration-300 hover:bg-white/90"
               >
-                Support the work
+                Soutenir notre action
                 <ArrowUpRight
                   size={17}
                   className="transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -324,9 +325,9 @@ export default function StoriesImpact() {
             </div>
 
             <div className="mt-12 grid gap-6 border-t border-white/15 pt-7 text-xs font-semibold uppercase tracking-[0.2em] text-white/45 sm:grid-cols-3">
-              <span>Healthcare</span>
-              <span>Community</span>
-              <span>Humanity</span>
+              <span>Santé</span>
+              <span>Communauté</span>
+              <span>Humanité</span>
             </div>
           </div>
         </div>
@@ -350,7 +351,7 @@ export default function StoriesImpact() {
               type="button"
               onClick={() => setActiveStory(null)}
               className="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition hover:bg-black/80"
-              aria-label="Close story"
+              aria-label="Fermer"
             >
               <X size={19} />
             </button>
@@ -363,12 +364,11 @@ export default function StoriesImpact() {
                   </div>
 
                   <p className="mt-6 font-serif text-3xl">
-                    Stories from the field
+                    Histoires du terrain
                   </p>
 
                   <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-white/50">
-                    Replace this placeholder with an IVP field video when your
-                    final footage is ready.
+                    La vidéo sera bientôt disponible.
                   </p>
                 </div>
               </div>
@@ -393,13 +393,6 @@ export default function StoriesImpact() {
                     {activeStory.description}
                   </p>
 
-                  <div className="mt-8 border-t border-gray-200 pt-7">
-                    <p className="text-sm leading-7 text-gray-500">
-                      This story section currently uses placeholder copy.
-                      Replace it with real IVP experiences, community stories,
-                      testimonials or field reports when they are available.
-                    </p>
-                  </div>
                 </div>
               </div>
             )}

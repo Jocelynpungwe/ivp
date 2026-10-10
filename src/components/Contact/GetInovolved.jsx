@@ -27,7 +27,7 @@ const involvementOptions = [
     description:
       'Your support can help make compassionate care, community outreach and essential assistance possible.',
     linkText: 'Support our work',
-    href: '/donate',
+    href: '/don',
   },
 ]
 

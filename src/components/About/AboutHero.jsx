@@ -1,84 +1,67 @@
-import { ArrowDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import aboutHero from '../../assets/about-hero.jpg'
+import { ArrowUpRight, HeartHandshake, HandHeart, Stethoscope } from 'lucide-react'
+import aboutHero from '../../assets/imghero.jpeg'
+
+const pillars = [
+  [Stethoscope, 'Soigner', 'Des soins infirmiers de proximité'],
+  [HandHeart, 'Écouter', 'Chaque histoire compte'],
+  [HeartHandshake, 'Accompagner', 'Un soutien qui dure'],
+]
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[85vh] overflow-hidden bg-black text-white">
-      {/* Background image */}
+    <section className="relative isolate overflow-hidden bg-neutral-950 text-white">
       <img
         src={aboutHero}
-        alt="IVP nurse providing care to children in the community"
-        className="absolute inset-0 h-full w-full object-cover"
+        alt="Une infirmière de l’IVP prodiguant des soins à la communauté"
+        className="hero-zoom absolute inset-0 -z-20 h-full w-full object-cover"
       />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-neutral-950/90 via-neutral-950/55 to-neutral-950/10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-neutral-950/90 via-transparent to-neutral-950/30" />
 
-      {/* Dark cinematic overlay */}
-      <div className="absolute inset-0 bg-black/45" />
-
-      {/* Left-side gradient for typography */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
-
-      {/* Bottom gradient */}
-      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/70 to-transparent" />
-
-      {/* Content */}
-      <div className="relative mx-auto flex min-h-[85vh] max-w-7xl items-end px-6 pb-20 pt-32 lg:px-8 lg:pb-24">
+      <div className="container-page flex min-h-[calc(100svh-80px)] flex-col justify-between gap-16 pb-10 pt-16 sm:pt-24">
         <div className="max-w-4xl">
-          {/* Label */}
-          <div className="mb-7 flex items-center gap-3">
-            <span className="h-px w-12 bg-ivp-red" />
-
-            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-white/75">
-              About IVP
-            </span>
-          </div>
-
-          {/* Heading */}
-          <h1 className="font-serif text-5xl leading-[0.92] tracking-[-0.045em] sm:text-7xl lg:text-[6.5rem]">
-            Care is more
-            <span className="block italic font-normal text-white/75">
-              than treatment.
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="mt-8 max-w-2xl text-base leading-7 text-white/70 sm:text-lg sm:leading-8">
-            Discover the people, purpose and commitment behind IVP — Infirmières
-            des Voies Publiques.
+          <p className="hero-in flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/80" style={{ '--d': '0ms' }}>
+            <Link to="/" className="transition hover:text-white">Accueil</Link>
+            <span className="h-px w-6 bg-ivp-red" />
+            À propos de l’IVP
           </p>
 
-          {/* CTA */}
-          <div className="mt-9 flex flex-wrap gap-4">
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-3 rounded-full bg-ivp-red px-7 py-4 text-sm font-semibold transition duration-300 hover:bg-red-700"
-            >
-              Connect with IVP
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/15">
-                <ArrowDown
-                  size={14}
-                  className="rotate-[-45deg] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </span>
-            </Link>
+          <h1 className="hero-in mt-8 font-display text-[2.9rem] leading-[0.98] tracking-[-0.035em] sm:text-6xl lg:text-[5.75rem]" style={{ '--d': '140ms' }}>
+            Prendre soin,
+            <span className="block italic text-white/65">c’est bien plus que soigner.</span>
+          </h1>
 
-            <Link
-              to="/gallery"
-              className="inline-flex items-center rounded-full border border-white/30 px-7 py-4 text-sm font-semibold transition duration-300 hover:border-white hover:bg-white/10"
-            >
-              See our work
+          <p className="hero-in mt-8 max-w-xl text-base leading-8 text-white/80 sm:text-lg" style={{ '--d': '280ms' }}>
+            Découvrez les personnes, la mission et l’engagement qui font
+            l’IVP — Infirmières des Voies Publiques.
+          </p>
+
+          <div className="hero-in mt-10 flex flex-wrap gap-4" style={{ '--d': '400ms' }}>
+            <Link to="/contact" className="group inline-flex items-center gap-3 rounded-full bg-ivp-red px-7 py-4 text-sm font-bold transition duration-300 hover:bg-ivp-red-dark">
+              Nous contacter
+              <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
+            <Link to="/galerie" className="inline-flex items-center rounded-full border border-white/35 bg-white/5 px-7 py-4 text-sm font-bold backdrop-blur-md transition duration-300 hover:border-white hover:bg-white/10">
+              Voir notre travail
             </Link>
           </div>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 right-6 hidden items-center gap-3 lg:flex">
-        <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/45">
-          Discover IVP
-        </span>
-
-        <div className="h-10 w-px bg-white/30" />
+        {/* Pillars */}
+        <ul className="hero-in grid gap-3 sm:grid-cols-3" style={{ '--d': '560ms' }}>
+          {pillars.map(([Icon, title, text]) => (
+            <li key={title} className="flex items-center gap-4 rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-xl">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-ivp-red">
+                <Icon size={19} />
+              </span>
+              <span>
+                <span className="block font-display text-xl leading-none">{title}</span>
+                <span className="mt-1 block text-xs text-white/65">{text}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

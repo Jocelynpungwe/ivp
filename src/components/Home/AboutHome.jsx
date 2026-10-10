@@ -159,7 +159,7 @@ export default function AboutHome() {
 
             {/* Button */}
             <Link
-              to="/about"
+              to="/a-propos"
               className="group mt-9 inline-flex items-center gap-3 rounded-full bg-ivp-red px-7 py-4 text-sm font-bold text-white shadow-lg shadow-ivp-red/10 transition-all duration-300 hover:bg-ivp-red-dark hover:shadow-xl"
             >
               Découvrez notre histoire

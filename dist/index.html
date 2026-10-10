@@ -1,12 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#b51f2a" />
-    <title>IVP — Infirmières des Voies Publiques</title>
-    <script type="module" crossorigin src="/assets/index-CoDOuVw0.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BTkIvgz5.css">
+    <meta
+      name="description"
+      content="IVP apporte des soins infirmiers aux enfants en situation de rue. MF Médical propose des soins esthétiques et de bien-être à Bruxelles."
+    />
+
+    <link rel="icon" type="image/png" href="/ivplogo.png" />
+    <title>IVP & MF Médical — Soins infirmiers solidaires et soins esthétiques</title>
+    <meta property="og:title" content="IVP & MF Médical" />
+    <meta property="og:description" content="Soins infirmiers solidaires (IVP) et soins esthétiques & bien-être (MF Médical)." />
+    <meta property="og:type" content="website" />
+    <script type="module" crossorigin src="/assets/index-9HUJBlSM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Byz2Ai6E.css">
   </head>
-  <body><div id="root"></div></body>
+  <body>
+        <!-- Netlify Forms: lets Netlify detect the contact form at deploy time (the real form is rendered by React) -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="activite" /><input name="firstName" /><input name="lastName" />
+      <input name="email" /><input name="phone" /><input name="reason" /><input name="service" />
+      <textarea name="message"></textarea><input name="bot-field" />
+    </form>
+    <div id="root"></div>
+  </body>
 </html>
