@@ -85,12 +85,13 @@ export default function AboutHome() {
             <p className="mt-7 max-w-xl text-base leading-8 text-ivp-muted">
               Infirmiers des Voies Publiques (IVP) est une organisation
               congolaise à but non lucratif dédiée à la solidarité et à
-              l’amélioration de l’accès aux soins de santé. Nous fournissons des
-              soins médicaux essentiels gratuits aux communautés vulnérables,
-              avec un accent particulier sur les enfants vivant dans la rue — y
-              compris ceux abandonnés ou rejetés par leur famille, les orphelins
-              et les enfants accusés de sorcellerie — ainsi que les enfants en
-              centre de détention.
+              l’amélioration de l’accès aux soins de santé. Nous offrons
+              gratuitement des soins aux personnes les plus démunies :
+              orphelins, enfants de la rue, veuves, personnes âgées des
+              hospices et personnes handicapées, avec une attention
+              particulière pour les enfants abandonnés ou rejetés par leur
+              famille, les enfants accusés de sorcellerie et ceux en centre
+              de détention.
             </p>
 
             {/* Feature + Impact */}
@@ -108,7 +109,7 @@ export default function AboutHome() {
                     </h3>
 
                     <p className="mt-2 text-sm leading-6 text-ivp-muted">
-                      Beaucoup de ces enfants manquent de soutien familial et
+                      Beaucoup de ces personnes manquent de soutien familial et
                       d’accès aux soins de santé de base, les rendant
                       vulnérables à des maladies chroniques et non traitées qui
                       peuvent avoir des conséquences mortelles en danger.

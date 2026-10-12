@@ -12,7 +12,7 @@ import equipeNoire from '../../assets/team/equipe-noire.jpg'
 // Names and roles as published on the previous IVP website (ivp-asbl.org) and provided by the association.
 const team = [
   { name: 'Marie-France Bomengo Mambia', role: 'Présidente de l’association', image: marieFrance, pos: 'object-[50%_30%]' },
-  { name: 'Anne Françoise Lap', role: 'Chargée de communication', image: anneFrancoise, pos: 'object-[50%_30%]' },
+  { name: 'Anne Françoise Lap', role: 'Chargée de communication · Représentante en Belgique', image: anneFrancoise, pos: 'object-[50%_30%]' },
   { name: 'Maître Gervais Ilunga', role: 'Conseiller juridique et avocat', image: gervais, pos: 'object-[50%_20%]' },
   { name: 'Dr Béatrice M.', role: 'Médecin', image: beatrice, pos: 'object-[50%_20%]' },
   { name: 'Sr Eveline L.', role: 'Biologiste (laborantine)', image: eveline, pos: 'object-[50%_20%]' },
@@ -35,7 +35,7 @@ export default function TeamSection({ compact = false }) {
             Les visages <span className="italic text-ivp-red">de l’IVP.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-gray-500">
-            Des personnes engagées, au service des enfants délaissés et des communautés vulnérables.
+            Des personnes engagées, au service des plus démunis : orphelins, enfants de la rue, veuves, personnes âgées et personnes handicapées.
           </p>
         </Reveal>
 

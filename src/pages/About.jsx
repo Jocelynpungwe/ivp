@@ -4,7 +4,6 @@ import MissionVision from '../components/About/MissionVision'
 import OurValues from '../components/About/OurValues'
 import TeamSection from '../components/About/TeamSection'
 import Recognition from '../components/About/Recognition'
-import PeopleBehindIVP from '../components/About/PeopleBehindIVP'
 import StoriesImpact from '../components/About/StoriesImpact'
 import FinalCTA from '../components/Home/FinalCTA'
 import useDocumentMeta from '../hooks/useDocumentMeta'
@@ -24,7 +23,6 @@ export default function About() {
       <OurValues />
       <TeamSection />
       <Recognition />
-      <PeopleBehindIVP />
       <StoriesImpact />
       <FinalCTA />
     </>

@@ -4,7 +4,7 @@ import Reveal from '../Reveal'
 import orphelins from '../../assets/gallery/archives/IMG_9875.jpg'
 import rue from '../../assets/gallery/archives/IMG-20240729-WA0003.jpg'
 import hospices from '../../assets/gallery/archives/IMG-20241005-WA0003.jpg'
-import handicapes from '../../assets/gallery/archives/IMG_4889.jpg'
+import handicapes from '../../assets/gallery/archives/WhatsApp-Image-2023-08-08-at-20.06.20.jpg'
 
 const objectifs = [
   'Faciliter l’accès aux soins de santé.',
@@ -23,7 +23,7 @@ const helped = [
   { label: 'Les enfants de la rue', image: rue, pos: 'object-[60%_40%]' },
   { label: 'Les veuves', image: null },
   { label: 'Les hospices', image: hospices, pos: 'object-[30%_30%]' },
-  { label: 'Les handicapés', image: handicapes, pos: 'object-[30%_40%]' },
+  { label: 'Les handicapés', image: handicapes, pos: 'object-[62%_50%]' },
 ]
 
 function Checklist({ items }) {

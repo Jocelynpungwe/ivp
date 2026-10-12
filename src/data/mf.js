@@ -130,5 +130,5 @@ export const assurances = [
   ['Soins sûrs et personnalisés', 'Chaque soin est adapté à vos besoins.'],
   ['Produits de qualité', 'Matériel certifié et produits sélectionnés.'],
   ['Écoute et bienveillance', 'Un accompagnement attentif, sans jugement.'],
-  ['À Bruxelles et environs', 'Des soins proches de chez vous.'],
+  ['À Bruxelles et à Kinshasa', 'Des soins proches de chez vous.'],
 ]

@@ -40,7 +40,7 @@ const steps = [
 ]
 
 const practical = [
-  { icon: MapPin, title: 'Où ?', text: 'À Bruxelles et environs.' },
+  { icon: MapPin, title: 'Où ?', text: 'À Bruxelles et à Kinshasa.' },
   { icon: CalendarHeart, title: 'Comment réserver ?', text: 'Sur rendez-vous uniquement, via le bouton « Prendre rendez-vous » ou le formulaire de contact.' },
   { icon: Coins, title: 'Et les tarifs ?', text: paid.prices },
 ]
@@ -48,7 +48,7 @@ const practical = [
 const faq = [
   { q: 'Les soins MF Médical sont-ils gratuits ?', a: `Non. ${paid.sentence} ${paid.prices} ${paid.ivp}` },
   { q: 'Qui réalise les soins ?', a: 'Les soins sont réalisés par une infirmière esthéticienne diplômée en Belgique, avec professionnalisme, sécurité et douceur.' },
-  { q: 'Où ont lieu les soins ?', a: 'À Bruxelles et environs, sur rendez-vous.' },
+  { q: 'Où ont lieu les soins ?', a: 'À Bruxelles et à Kinshasa, sur rendez-vous.' },
   { q: 'Comment prendre rendez-vous ?', a: 'Cliquez sur « Prendre rendez-vous », indiquez le soin souhaité et vos coordonnées : nous vous recontactons pour convenir d’un créneau.' },
   { q: 'Que fait le PRP ?', a: 'Le PRP utilise vos propres plaquettes sanguines pour stimuler la régénération cellulaire. Il améliore la qualité de la peau, réduit les rides, les cicatrices et les taches, et favorise la repousse des cheveux en renforçant le cuir chevelu.' },
   { q: 'Le lifting colombien est-il invasif ?', a: 'Non. C’est une technique non invasive et naturelle qui stimule la production de collagène pour remodeler, raffermir et améliorer la tonicité des fessiers. Les résultats sont progressifs et durables.' },
@@ -84,7 +84,7 @@ function Faq() {
 
 export default function Soins() {
   useDocumentMeta(
-    'MF Médical — Soins esthétiques & bien-être à Bruxelles (sur rendez-vous)',
+    'MF Médical — Soins esthétiques & bien-être à Bruxelles et Kinshasa (sur rendez-vous)',
     'Infirmière esthéticienne diplômée en Belgique : PRP, blanchiment dentaire, pédicure médicale, lifting colombien, réflexologie plantaire, massage et drainage lymphatique. Services payants, sur rendez-vous.',
   )
 
@@ -112,7 +112,7 @@ export default function Soins() {
             </p>
 
             <ul className="hero-in mt-8 flex flex-wrap gap-2.5" style={{ '--d': '420ms' }}>
-              {['Service payant', 'Sur rendez-vous', 'Bruxelles et environs'].map((t) => (
+              {['Service payant', 'Sur rendez-vous', 'Bruxelles & Kinshasa'].map((t) => (
                 <li key={t} className="rounded-full border border-mf-gold/40 bg-mf-gold/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-mf-gold-soft">{t}</li>
               ))}
             </ul>
@@ -135,17 +135,6 @@ export default function Soins() {
               </p>
               <p className="mt-1 font-display text-lg">Infirmière esthéticienne</p>
             </div>
-          </div>
-        </div>
-
-        <div className="marquee border-y border-white/10 py-5" aria-hidden="true">
-          <div className="marquee-track">
-            {[...services, ...services].map((s, i) => (
-              <span key={i} className="flex items-center whitespace-nowrap font-display text-2xl text-white/45 sm:text-3xl">
-                {s.title}
-                <Sparkles size={16} className="mx-8 text-mf-gold" />
-              </span>
-            ))}
           </div>
         </div>
       </section>
@@ -278,8 +267,10 @@ export default function Soins() {
           <ol className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {steps.map(({ icon: Icon, title, text }, i) => (
               <Reveal as="li" key={title} delay={i * 90} className="relative rounded-[1.75rem] border border-mf-ink/10 bg-white p-7 transition duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-mf-plum/10">
-                <span className="outline-num font-display text-6xl leading-none text-mf-gold/30" aria-hidden="true">0{i + 1}</span>
-                <span className="mt-6 flex h-12 w-12 items-center justify-center rounded-full bg-mf-blush text-mf-plum"><Icon size={22} strokeWidth={1.5} /></span>
+                <div className="flex items-center justify-between">
+                  <span className="outline-num font-display text-6xl leading-none text-mf-gold/30" aria-hidden="true">0{i + 1}</span>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-mf-blush text-mf-plum"><Icon size={22} strokeWidth={1.5} /></span>
+                </div>
                 <h3 className="mt-6 font-display text-2xl leading-tight text-mf-ink">{title}</h3>
                 <p className="mt-3 text-sm leading-7 text-neutral-600">{text}</p>
               </Reveal>
@@ -357,7 +348,7 @@ export default function Soins() {
       <section className="relative overflow-hidden bg-mf-ink py-28 text-center text-white sm:py-40" aria-labelledby="cta-rdv">
         <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-mf-plum/50 blur-[130px]" />
         <Reveal className="container-page relative">
-          <p className="text-xs font-bold uppercase tracking-[0.35em] text-mf-gold-soft">Bruxelles et environs · Service payant</p>
+          <p className="text-xs font-bold uppercase tracking-[0.35em] text-mf-gold-soft">Bruxelles & Kinshasa · Service payant</p>
           <h2 id="cta-rdv" className="mx-auto mt-6 max-w-4xl font-display text-5xl leading-[0.98] tracking-[-0.03em] sm:text-7xl lg:text-8xl">
             Prenez rendez-vous <span className="gold-text italic">dès maintenant.</span>
           </h2>

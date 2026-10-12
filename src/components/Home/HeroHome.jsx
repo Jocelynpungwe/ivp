@@ -50,7 +50,7 @@ export default function HeroHome() {
           </h1>
 
           <p className="hero-in mx-auto mt-7 max-w-2xl text-base leading-8 text-white/85 sm:text-lg" style={{ '--d': '260ms' }}>
-            L’IVP soigne gratuitement les enfants de la rue et les plus démunis. MF Médical
+            L’IVP soigne gratuitement les plus démunis : orphelins, enfants de la rue, veuves, personnes âgées et handicapés. MF Médical
             prend soin de votre beauté et de votre bien-être. Deux univers, un même cœur d’infirmière.
           </p>
         </div>

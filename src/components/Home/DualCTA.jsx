@@ -32,7 +32,7 @@ export default function DualCTA() {
           <div className="absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full bg-mf-plum/60 blur-[100px]" />
           <div className="absolute -bottom-32 -left-20 -z-10 h-80 w-80 rounded-full border border-mf-gold/20" />
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#e9cf98] to-[#b88a3e] text-mf-ink"><Sparkles size={20} /></span>
-          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.28em] text-mf-gold-soft">MF Médical · Bruxelles et environs</p>
+          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.28em] text-mf-gold-soft">MF Médical · Bruxelles & Kinshasa</p>
           <h2 className="mt-4 max-w-md font-display text-4xl leading-[1.02] tracking-tight sm:text-5xl">
             Prenez rendez-vous <span className="gold-text italic">dès maintenant.</span>
           </h2>

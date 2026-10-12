@@ -6,7 +6,7 @@ import { services } from '../../data/mf'
 import ivpImage from '../../assets/img16.jpeg'
 import mfImage from '../../assets/mf/hero.jpg'
 
-const ivpTags = ['Soins communautaires', 'Soutien compassionnel', 'Soins infirmiers en action']
+const ivpTags = ['Soins de première nécessité', 'Soins des plaies', 'Traitement des épileptiques', 'Soupe commune']
 
 export default function TwoWays() {
   return (
@@ -21,7 +21,7 @@ export default function TwoWays() {
             Deux façons de <span className="italic text-ivp-red">prendre soin</span>.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-ivp-muted">
-            Le soin infirmier au service des plus vulnérables avec l’IVP, et au
+            Le soin infirmier au service des plus démunis avec l’IVP, et au
             service de votre bien-être avec MF Médical.
           </p>
         </Reveal>
@@ -47,7 +47,7 @@ export default function TwoWays() {
                   <span className="mt-1 block text-2xl italic text-white/75 sm:text-3xl">Infirmières des Voies Publiques</span>
                 </h3>
                 <p className="mt-5 max-w-md text-sm leading-7 text-white/80">
-                  Des soins infirmiers et un soutien compatissant pour les enfants en situation de rue.
+                  Des soins gratuits et un soutien aux personnes les plus démunies : orphelins, enfants de la rue, veuves, personnes âgées et personnes handicapées.
                 </p>
                 <ul className="mt-6 flex flex-wrap gap-2">
                   {ivpTags.map((t) => (

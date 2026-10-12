@@ -19,7 +19,7 @@ import useDocumentMeta from '../hooks/useDocumentMeta'
 export default function Home() {
   useDocumentMeta(
     'IVP & MF Médical — Soins infirmiers solidaires et soins esthétiques',
-    'IVP apporte des soins infirmiers aux enfants en situation de rue. MF Médical propose des soins esthétiques et de bien-être à Bruxelles.',
+    'IVP offre gratuitement des soins aux plus démunis : orphelins, enfants de la rue, veuves, personnes âgées et handicapés. MF Médical propose des soins esthétiques et de bien-être à Bruxelles et à Kinshasa.',
   )
   return (
     <>
@@ -57,8 +57,8 @@ export default function Home() {
           kicker="MF Médical · Soins esthétiques & bien-être"
           title="Sublimez votre"
           accent="beauté naturelle."
-          text="Infirmière esthéticienne diplômée en Belgique : professionnalisme, sécurité et douceur, à Bruxelles et environs."
-          pills={['Service payant', 'Sur rendez-vous', 'Bruxelles et environs']}
+          text="Infirmière esthéticienne diplômée en Belgique : professionnalisme, sécurité et douceur, à Bruxelles et à Kinshasa."
+          pills={['Service payant', 'Sur rendez-vous', 'Bruxelles & Kinshasa']}
         />
         <MFShowcase />
         <MFApproach />

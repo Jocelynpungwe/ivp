@@ -21,7 +21,7 @@ const niches = {
     focus: 'focus:border-ivp-red',
     panel: 'bg-[#f7f5f2]',
     title: 'Parlons de votre engagement.',
-    text: 'Une question sur l’IVP, l’envie de devenir bénévole ou partenaire, ou de soutenir nos soins aux enfants ? Écrivez-nous.',
+    text: 'Une question sur l’IVP, l’envie de devenir bénévole ou partenaire, ou de soutenir nos soins gratuits aux plus démunis ? Écrivez-nous.',
     reasons: ['Demande d’information', 'Devenir bénévole', 'Devenir partenaire', 'Soutenir l’IVP / faire un don', 'Autre'],
     place: 'Organisation congolaise à but non lucratif (asbl)',
     placeSub: 'Des soins infirmiers au service des communautés vulnérables',
@@ -39,7 +39,7 @@ const niches = {
     title: 'Prenez rendez-vous.',
     text: 'Un soin à réserver, une question sur un traitement ? Dites-nous ce qui vous ferait du bien, nous revenons vers vous.',
     reasons: ['Prendre rendez-vous', 'Question sur un soin', 'Autre'],
-    place: 'Bruxelles et environs',
+    place: 'Bruxelles et Kinshasa',
     placeSub: 'Infirmière esthéticienne diplômée en Belgique',
   },
 }
@@ -53,7 +53,7 @@ const labelClass = 'mb-1 block text-[10px] font-semibold uppercase tracking-[0.1
 export default function Contact() {
   useDocumentMeta(
     'Contact — IVP & MF Médical',
-    'Contactez l’IVP (soins infirmiers solidaires) ou prenez rendez-vous avec MF Médical (soins esthétiques & bien-être à Bruxelles).',
+    'Contactez l’IVP (soins infirmiers solidaires) ou prenez rendez-vous avec MF Médical (soins esthétiques & bien-être à Bruxelles et Kinshasa).',
   )
   const [params] = useSearchParams()
   const [niche, setNiche] = useState(params.get('sujet') === 'soins' ? 'mf' : 'ivp')
