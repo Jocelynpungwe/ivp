@@ -18,9 +18,26 @@ export const bookingLink = MF.whatsapp
   ? { href: `https://wa.me/${MF.whatsapp}`, external: true }
   : { href: '/contact?sujet=soins', external: false }
 
+// Link to book a given treatment (falls back to the generic booking link).
+export const bookingLinkFor = (service) => {
+  if (!service) return bookingLink
+  return MF.whatsapp
+    ? { href: `https://wa.me/${MF.whatsapp}?text=${encodeURIComponent(`Bonjour, je souhaite prendre rendez-vous pour : ${service.title}.`)}`, external: true }
+    : { href: `/contact?sujet=soins&soin=${service.id}`, external: false }
+}
+
+// MF Médical is a paid, by-appointment service (unlike the free care offered by the IVP).
+export const paid = {
+  short: 'Service payant · sur rendez-vous',
+  sentence: 'Les soins MF Médical sont des services payants, réalisés sur rendez-vous.',
+  prices: 'Les tarifs sont communiqués sur demande : contactez-nous pour connaître le tarif du soin qui vous intéresse.',
+  ivp: 'À ne pas confondre avec l’IVP, l’association qui offre gratuitement des soins aux plus démunis.',
+}
+
 export const services = [
   {
     id: 'prp',
+    tags: ['Vos propres plaquettes', 'Peau & cheveux'],
     title: 'PRP',
     subtitle: 'Régénération & Jeunesse',
     image: prp,
@@ -35,6 +52,7 @@ export const services = [
   },
   {
     id: 'blanchiment',
+    tags: ['Procédé sûr et contrôlé', 'Résultat dès la 1re séance'],
     title: 'Blanchiment dentaire',
     subtitle: 'Un sourire plus éclatant',
     image: blanchiment,
@@ -49,6 +67,7 @@ export const services = [
   },
   {
     id: 'pedicure',
+    tags: ['Soins des ongles', 'Prévention des infections'],
     title: 'Pédicure médicale',
     subtitle: 'Des pieds sains et soignés',
     image: pedicure,
@@ -62,6 +81,7 @@ export const services = [
   },
   {
     id: 'lifting',
+    tags: ['Non invasif', 'Résultats progressifs et durables'],
     title: 'Lifting colombien',
     subtitle: 'Des fessiers plus galbés et fermes',
     image: lifting,
@@ -76,6 +96,7 @@ export const services = [
   },
   {
     id: 'reflexologie',
+    tags: ['Anti-stress', 'Circulation & énergie'],
     title: 'Réflexologie plantaire',
     subtitle: 'Détente & Équilibre',
     image: reflexologie,
@@ -90,6 +111,7 @@ export const services = [
   },
   {
     id: 'drainage',
+    tags: ['Rétention d’eau', 'Élimination des toxines'],
     title: 'Massage & drainage lymphatique',
     subtitle: 'Légèreté & Vitalité',
     image: massage,

@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { ArrowUpRight, Facebook, Menu, X } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
 import { closeMobileMenu, toggleMobileMenu } from '../features/ui/uiSlice'
+import BookingButton from './BookingButton'
 import logo from '../assets/ivplogo.png'
 
 // [label, path, dot colour class]
@@ -44,7 +45,7 @@ export default function Navbar() {
             <img src={logo} alt="IVP Logo" className="h-full w-[95px] object-cover" />
           </Link>
 
-          <nav className="hidden items-center gap-7 md:flex" aria-label="Navigation principale">
+          <nav className="hidden items-center gap-4 md:flex lg:gap-7" aria-label="Navigation principale">
             {links.map(([label, to]) => (
               <NavLink
                 key={to}
@@ -56,7 +57,11 @@ export default function Navbar() {
                 {label}
               </NavLink>
             ))}
-            <Link to="/don" className="rounded-full bg-ivp-red px-5 py-3 text-sm font-bold text-white transition hover:bg-ivp-red-dark">
+            <BookingButton
+              icon={false}
+              className="rounded-full bg-mf-plum px-4 py-3 text-sm font-bold text-white transition hover:bg-mf-plum-dark lg:px-5"
+            />
+            <Link to="/don" className="rounded-full bg-ivp-red px-4 py-3 text-sm font-bold text-white transition hover:bg-ivp-red-dark lg:px-5">
               Faire un don
             </Link>
           </nav>
@@ -127,6 +132,7 @@ export default function Navbar() {
           </nav>
 
           <div className="shrink-0 border-t border-neutral-100 bg-[#f7f5f2] px-6 py-6">
+            <BookingButton className="mb-3 flex items-center justify-center gap-2 rounded-full bg-mf-plum px-6 py-4 text-sm font-bold text-white transition active:scale-[0.98]" />
             <Link to="/don" className="flex items-center justify-center gap-2 rounded-full bg-ivp-red px-6 py-4 text-sm font-bold text-white transition active:scale-[0.98]">
               Faire un don <ArrowUpRight size={16} />
             </Link>

@@ -1,0 +1,80 @@
+import Reveal from '../Reveal'
+import marieFrance from '../../assets/team/marie-france.jpg'
+import anneFrancoise from '../../assets/team/anne-francoise-lap.jpg'
+import gervais from '../../assets/team/maitre-germain-ilunga.jpg'
+import beatrice from '../../assets/team/beatrice.jpg'
+import eveline from '../../assets/team/eveline.jpg'
+import benevoles from '../../assets/team/benevoles.jpg'
+import infirmieres from '../../assets/team/infirmieres.jpg'
+import equipePolos from '../../assets/team/equipe-polos.jpg'
+import equipeNoire from '../../assets/team/equipe-noire.jpg'
+
+// Names and roles as published on the previous IVP website (ivp-asbl.org) and provided by the association.
+const team = [
+  { name: 'Marie-France Bomengo Mambia', role: 'Présidente de l’association', image: marieFrance, pos: 'object-[50%_30%]' },
+  { name: 'Anne Françoise Lap', role: 'Chargée de communication', image: anneFrancoise, pos: 'object-[50%_30%]' },
+  { name: 'Maître Gervais Ilunga', role: 'Conseiller juridique et avocat', image: gervais, pos: 'object-[50%_20%]' },
+  { name: 'Dr Béatrice M.', role: 'Médecin', image: beatrice, pos: 'object-[50%_20%]' },
+  { name: 'Sr Eveline L.', role: 'Biologiste (laborantine)', image: eveline, pos: 'object-[50%_20%]' },
+]
+
+const field = [
+  { image: benevoles, alt: 'Les équipes des bénévoles de l’IVP', caption: 'Les équipes des bénévoles de l’IVP', className: 'md:col-span-2', pos: 'object-[50%_40%]' },
+  { image: infirmieres, alt: 'Infirmières de l’IVP devant une bannière sur les soins médicaux gratuits', caption: 'Infirmières de l’IVP', className: 'md:row-span-2', pos: 'object-[50%_50%]' },
+  { image: equipePolos, alt: 'Une équipe de l’IVP en mission', caption: 'L’équipe de l’IVP en mission', className: '', pos: 'object-[50%_40%]' },
+  { image: equipeNoire, alt: 'Une équipe médicale de l’IVP sur le terrain', caption: 'L’équipe de l’IVP sur le terrain', className: '', pos: 'object-[50%_40%]' },
+]
+
+export default function TeamSection({ compact = false }) {
+  return (
+    <section className="bg-[#f7f5f2] py-24 sm:py-32" aria-labelledby="equipe">
+      <div className="container-page">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <p className="section-label justify-center text-ivp-red">Notre équipe</p>
+          <h2 id="equipe" className="mt-6 font-display text-4xl leading-[1.04] tracking-tight text-ivp-black sm:text-6xl">
+            Les visages <span className="italic text-ivp-red">de l’IVP.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-gray-500">
+            Des personnes engagées, au service des enfants délaissés et des communautés vulnérables.
+          </p>
+        </Reveal>
+
+        <ul className="mx-auto mt-16 flex max-w-5xl flex-wrap justify-center gap-x-6 gap-y-12">
+          {team.map(({ name, role, image, pos }, i) => (
+            <Reveal as="li" delay={(i % 3) * 100} key={name} className="group w-full sm:w-[calc(33.333%-1rem)]">
+              <div className="relative overflow-hidden rounded-[1.75rem] bg-neutral-200">
+                <img src={image} alt={`${name}, ${role}`} loading="lazy" className={`aspect-[4/5] w-full object-cover ${pos} transition duration-[1200ms] group-hover:scale-105`} />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
+                <span className="absolute bottom-0 left-0 h-1 w-0 bg-ivp-red transition-all duration-700 group-hover:w-full" />
+              </div>
+              <h3 className="mt-6 font-display text-2xl leading-tight text-ivp-black">{name}</h3>
+              <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-ivp-red">{role}</p>
+            </Reveal>
+          ))}
+        </ul>
+
+        {!compact && (
+          <>
+            {/* Équipes sur le terrain */}
+            <Reveal className="mx-auto mt-28 max-w-2xl text-center">
+              <p className="section-label justify-center text-ivp-red">Sur le terrain</p>
+              <h3 className="mt-6 font-display text-3xl leading-tight tracking-tight text-ivp-black sm:text-5xl">
+                Des équipes <span className="italic text-ivp-red">engagées.</span>
+              </h3>
+            </Reveal>
+
+            <Reveal className="mt-14 grid gap-4 md:h-[560px] md:grid-cols-3 md:grid-rows-2">
+              {field.map(({ image, alt, caption, className, pos }) => (
+                <figure key={caption} className={`group relative overflow-hidden rounded-[1.5rem] bg-neutral-200 ${className}`}>
+                  <img src={image} alt={alt} loading="lazy" className={`h-[260px] w-full object-cover ${pos} transition duration-[1200ms] group-hover:scale-105 md:h-full`} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <figcaption className="absolute bottom-5 left-5 right-5 font-display text-xl text-white">{caption}</figcaption>
+                </figure>
+              ))}
+            </Reveal>
+          </>
+        )}
+      </div>
+    </section>
+  )
+}

@@ -17,7 +17,7 @@ const themes = {
   },
 }
 
-export default function ChapterDivider({ id, theme = 'ivp', number, kicker, title, accent, text }) {
+export default function ChapterDivider({ id, theme = 'ivp', number, kicker, title, accent, text, pills }) {
   const t = themes[theme]
   return (
     <section id={id} className={`relative isolate scroll-mt-16 overflow-hidden py-20 sm:py-28 ${t.wrap}`}>
@@ -33,6 +33,13 @@ export default function ChapterDivider({ id, theme = 'ivp', number, kicker, titl
             {title} <span className={theme === 'mf' ? 'gold-text italic' : 'italic text-white/70'}>{accent}</span>
           </h2>
           <p className="mt-5 max-w-xl text-base leading-8 text-white/70">{text}</p>
+          {pills && (
+            <ul className="mt-7 flex flex-wrap gap-2.5">
+              {pills.map((t) => (
+                <li key={t} className="rounded-full border border-white/25 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em]">{t}</li>
+              ))}
+            </ul>
+          )}
         </div>
       </Reveal>
     </section>

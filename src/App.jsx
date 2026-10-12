@@ -3,6 +3,8 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
+import GalleryIVP from './pages/GalleryIVP'
+import GalleryMF from './pages/GalleryMF'
 import Contact from './pages/Contact'
 import Soins from './pages/Soins'
 import Donate from './pages/Donate'
@@ -15,6 +17,8 @@ export default function App() {
       <Route path="/a-propos" element={<About />} />
       <Route path="/soins" element={<Soins />} />
       <Route path="/galerie" element={<Gallery />} />
+      <Route path="/galerie/ivp" element={<GalleryIVP />} />
+      <Route path="/galerie/mf-medical" element={<GalleryMF />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/don" element={<Donate />} />
       {/* Anciennes adresses en anglais → nouvelles adresses en français */}

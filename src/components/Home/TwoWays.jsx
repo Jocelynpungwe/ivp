@@ -36,7 +36,7 @@ export default function TwoWays() {
               <div className="flex items-center justify-between">
                 <span className="flex items-center gap-3 rounded-full border border-white/25 bg-white/10 py-1.5 pl-1.5 pr-4 text-[11px] font-semibold uppercase tracking-[0.22em] backdrop-blur-md">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-ivp-red"><HandHeart size={16} /></span>
-                  Mission solidaire
+                  Soins gratuits
                 </span>
                 <span className="font-display text-5xl text-white/20">01</span>
               </div>
@@ -78,7 +78,7 @@ export default function TwoWays() {
               <div className="flex items-center justify-between">
                 <span className="flex items-center gap-3 rounded-full border border-white/25 bg-white/10 py-1.5 pl-1.5 pr-4 text-[11px] font-semibold uppercase tracking-[0.22em] backdrop-blur-md">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#e9cf98] to-[#b88a3e] text-mf-plum-dark"><Sparkles size={16} /></span>
-                  Soins esthétiques
+                  Service payant · sur rendez-vous
                 </span>
                 <span className="font-display text-5xl text-white/20">02</span>
               </div>

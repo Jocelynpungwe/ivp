@@ -110,7 +110,7 @@ export default function Footer() {
             </div>
             <p className="mt-7 flex gap-2.5 text-sm leading-6 text-white/45">
               <MapPin size={16} className="mt-1 shrink-0 text-mf-gold" strokeWidth={1.5} />
-              Bruxelles et environs.
+              Bruxelles et environs. Soins payants, sur rendez-vous.
             </p>
           </nav>
         </div>

@@ -47,7 +47,7 @@ export default function AboutHero() {
               Nous contacter
               <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
-            <Link to="/galerie" className="inline-flex items-center rounded-full border border-white/35 bg-white/5 px-5 py-3.5 text-[13px] font-bold backdrop-blur-md transition duration-300 hover:border-white hover:bg-white/10 md:px-7 md:py-4 md:text-sm">
+            <Link to="/galerie/ivp" className="inline-flex items-center rounded-full border border-white/35 bg-white/5 px-5 py-3.5 text-[13px] font-bold backdrop-blur-md transition duration-300 hover:border-white hover:bg-white/10 md:px-7 md:py-4 md:text-sm">
               Voir notre travail
             </Link>
           </div>

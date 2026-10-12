@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { ArrowUpRight, CalendarHeart, CheckCircle2, Facebook, HandHeart, MapPin, MessageCircle, Sparkles } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import useDocumentMeta from '../hooks/useDocumentMeta'
-import { MF, services } from '../data/mf'
+import { MF, paid, services } from '../data/mf'
 import ivpHero from '../assets/img16.jpeg'
 import mfHero from '../assets/mf/hero.jpg'
 
@@ -58,7 +58,13 @@ export default function Contact() {
   const [params] = useSearchParams()
   const [niche, setNiche] = useState(params.get('sujet') === 'soins' ? 'mf' : 'ivp')
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', phone: '', reason: '', service: '', message: '', 'bot-field': '' })
+  const initialService = services.find((x) => x.id === params.get('soin'))
+  const [form, setForm] = useState({
+    firstName: '', lastName: '', email: '', phone: '',
+    reason: params.get('sujet') === 'soins' && initialService ? 'Prendre rendez-vous' : '',
+    service: initialService ? initialService.title : '',
+    message: '', 'bot-field': '',
+  })
   const t = niches[niche]
 
   const onChange = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
@@ -143,6 +149,12 @@ export default function Contact() {
               <p className={`section-label ${t.accent}`}>{t.label}</p>
               <h2 className="mt-5 font-display text-4xl leading-[1.04] tracking-tight sm:text-5xl">{t.title}</h2>
               <p className="mt-6 max-w-md text-base leading-8 text-neutral-500">{t.text}</p>
+
+              {niche === 'mf' && (
+                <p className="mt-6 max-w-md rounded-2xl border border-mf-plum/20 bg-mf-blush px-5 py-4 text-sm leading-6 text-mf-plum-dark">
+                  <strong>{paid.short}.</strong> {paid.prices}
+                </p>
+              )}
 
               <ul className="mt-10 space-y-6">
                 <li className="flex gap-4">

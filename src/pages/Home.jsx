@@ -3,12 +3,16 @@ import TwoWays from '../components/Home/TwoWays'
 import ChapterSwitcher from '../components/Home/ChapterSwitcher'
 import ChapterDivider from '../components/Home/ChapterDivider'
 import AboutHome from '../components/Home/AboutHome'
-import IVPMission from '../components/Home/IVPMission'
+import IVPOffer from '../components/Home/IVPOffer'
+import IVPSites from '../components/Home/IVPSites'
 import IVPAction from '../components/Home/IVPAction'
 import IVPImpact from '../components/Home/IVPImpact'
 import IVPGetInvolved from '../components/Home/IVPGetInvolved'
+import TeamSection from '../components/About/TeamSection'
+import Recognition from '../components/About/Recognition'
 import MFShowcase from '../components/Home/MFShowcase'
 import MFApproach from '../components/Home/MFApproach'
+import MFPhotoStrip from '../components/Home/MFPhotoStrip'
 import DualCTA from '../components/Home/DualCTA'
 import useDocumentMeta from '../hooks/useDocumentMeta'
 
@@ -30,16 +34,20 @@ export default function Home() {
           id="chapitre-ivp"
           theme="ivp"
           number="01"
-          kicker="IVP · Mission solidaire"
+          kicker="IVP asbl · Ensemble pour une vie meilleure"
           title="Soigner ceux"
           accent="que l’on oublie."
-          text="Infirmières des Voies Publiques apporte des soins et un soutien aux enfants et aux communautés vulnérables."
+          text="Parce que chaque vie compte : IVP asbl, une action solidaire au service des plus vulnérables."
+          pills={['Soigner', 'Soutenir', 'Espérer']}
         />
+        <TeamSection compact />
+        <Recognition />
         <AboutHome />
-        <IVPMission />
+        <IVPOffer />
         <IVPAction />
         <IVPImpact />
         <IVPGetInvolved />
+        <IVPSites />
 
         {/* ===== CHAPITRE 02 — MF MÉDICAL ===== */}
         <ChapterDivider
@@ -50,9 +58,11 @@ export default function Home() {
           title="Sublimez votre"
           accent="beauté naturelle."
           text="Infirmière esthéticienne diplômée en Belgique : professionnalisme, sécurité et douceur, à Bruxelles et environs."
+          pills={['Service payant', 'Sur rendez-vous', 'Bruxelles et environs']}
         />
         <MFShowcase />
         <MFApproach />
+        <MFPhotoStrip />
       </div>
 
       <DualCTA />

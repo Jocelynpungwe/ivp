@@ -185,3 +185,19 @@ p { text-wrap: pretty; }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 .spin-slow { animation: spin-slow 28s linear infinite; }
 @media (prefers-reduced-motion: reduce) { .spin-slow { animation: none; } }
+
+/* Hide scrollbar on horizontally scrollable chip bars */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* HOME HERO — diagonal seam between the IVP and MF Médical photos */
+.hero-split-a { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+.hero-seam { filter: drop-shadow(0 -3px 0 #e9cf98); }
+.hero-split-b { clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
+@media (min-width: 1024px) {
+  .hero-split-a { clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+  .hero-seam { filter: drop-shadow(-3px 0 0 #e9cf98); }
+  .hero-split-b { clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+.marquee-reverse .marquee-track { animation-direction: reverse; animation-duration: 55s; }

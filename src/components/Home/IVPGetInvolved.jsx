@@ -13,11 +13,11 @@ export default function IVPGetInvolved() {
           <div>
             <p className="section-label text-ivp-red">Comment vous pouvez aider</p>
             <h2 id="agir-title" className="mt-5 font-display text-4xl leading-[1.04] tracking-tight sm:text-6xl">
-              Il existe plus d’une <span className="italic text-white/55">façon de prendre soin.</span>
+              Donner, c’est <span className="italic text-white/55">sauver des vies.</span>
             </h2>
           </div>
           <p className="max-w-md text-base leading-8 text-white/60">
-            Que vous fassiez un don, deveniez bénévole ou établissiez un partenariat, votre engagement nous aide à placer l’humain au cœur des soins.
+            Votre soutien, même modeste, fait une grande différence. Ensemble, donnons de l’espoir et redonnons la dignité : faites un don, devenez bénévole ou partenaire.
           </p>
         </Reveal>
 
@@ -26,8 +26,8 @@ export default function IVPGetInvolved() {
             <article className="flex h-full flex-col justify-between rounded-[1.75rem] bg-ivp-red p-8 sm:p-10">
               <div>
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-ivp-red"><Heart size={20} fill="currentColor" /></span>
-                <h3 className="mt-8 font-display text-3xl leading-tight sm:text-4xl">Votre soutien peut devenir un soin pour quelqu’un.</h3>
-                <p className="mt-4 text-sm leading-7 text-white/80">Chaque contribution renforce l’action de l’IVP et son engagement pour des soins empreints de compassion.</p>
+                <h3 className="mt-8 font-display text-3xl leading-tight sm:text-4xl">Appel aux dons et au financement.</h3>
+                <p className="mt-4 text-sm leading-7 text-white/80">Votre soutien, même modeste, permet d’offrir gratuitement des soins, des repas et de l’espoir à ceux qui ont tout perdu.</p>
               </div>
               <Link to="/don" className="group mt-10 inline-flex w-fit items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-bold text-ivp-red transition hover:bg-white/90">
                 Faire un don à l’IVP <ArrowUpRight size={16} className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -56,7 +56,7 @@ export default function IVPGetInvolved() {
 
         {/* Gallery teaser */}
         <Reveal className="mt-4">
-          <Link to="/galerie" className="group relative block overflow-hidden rounded-[1.75rem]" aria-label="Voir la galerie">
+          <Link to="/galerie/ivp" className="group relative block overflow-hidden rounded-[1.75rem]" aria-label="Voir la galerie">
             <div className="grid grid-cols-3 gap-1">
               {[img1, img2, img3].map((src, i) => (
                 <img key={i} src={src} alt="" loading="lazy" className="h-40 w-full object-cover transition duration-[1200ms] group-hover:scale-105 sm:h-56" />

@@ -1,72 +1,111 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, BookOpenCheck, HandHeart, Stethoscope, UsersRound } from 'lucide-react'
+import { ArrowRight, HeartHandshake } from 'lucide-react'
 import Reveal from '../Reveal'
-import eldersImg from '../../assets/elders.jpg'
+import orphelins from '../../assets/gallery/archives/IMG_9875.jpg'
+import rue from '../../assets/gallery/archives/IMG-20240729-WA0003.jpg'
+import hospices from '../../assets/gallery/archives/IMG-20241005-WA0003.jpg'
+import handicapes from '../../assets/gallery/archives/IMG_4889.jpg'
 
-const approach = [
-  { icon: Stethoscope, title: 'Soins infirmiers', text: 'Des soins empreints de compassion, axés sur les besoins des personnes que nous servons.' },
-  { icon: UsersRound, title: 'Action communautaire', text: 'Rapprocher les soins, le soutien et la solidarité de ceux qui en ont le plus besoin.' },
-  { icon: BookOpenCheck, title: 'Éducation à la santé', text: 'Partager des informations pratiques pour aider chacun à faire des choix éclairés.' },
-  { icon: HandHeart, title: 'Soutien aux personnes vulnérables', text: 'Un accompagnement bienveillant pour les personnes en situation difficile.' },
+const objectifs = [
+  'Faciliter l’accès aux soins de santé.',
+  'Lutter contre la pauvreté.',
+  'Améliorer les conditions de vie des personnes abandonnées.',
+]
+
+const plan = [
+  'Organiser des descentes médicales communautaires.',
+  'Distribuer de la bouillie protéinée, des vivres, des vêtements et des médicaments.',
+  'Développer des projets durables au profit des populations défavorisées.',
 ]
 
 const helped = [
-  ['Enfants et jeunes', 'Une attention particulière quand ils en ont le plus besoin.'],
-  ['Personnes âgées', 'Un accès aux soins qui préserve leur dignité.'],
-  ['Communautés et familles', 'Des soins rapprochés de ceux qui font leur force.'],
-  ['Personnes en besoin de soins', 'Un soutien médical pour lever les obstacles.'],
+  { label: 'Les orphelins', image: orphelins, pos: 'object-[35%_30%]' },
+  { label: 'Les enfants de la rue', image: rue, pos: 'object-[60%_40%]' },
+  { label: 'Les veuves', image: null },
+  { label: 'Les hospices', image: hospices, pos: 'object-[30%_30%]' },
+  { label: 'Les handicapés', image: handicapes, pos: 'object-[30%_40%]' },
 ]
+
+function Checklist({ items }) {
+  return (
+    <ul className="mt-6 space-y-4">
+      {items.map((t) => (
+        <li key={t} className="flex gap-4 text-[15px] leading-7 text-neutral-700">
+          <span className="mt-3 h-px w-5 shrink-0 bg-ivp-red" />
+          {t}
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export default function IVPAction() {
   return (
-    <section className="bg-[#f7f5f2] py-24 sm:py-32" aria-labelledby="action-title">
+    <section className="bg-[#f7f5f2] py-24 sm:py-32" aria-labelledby="mission-title">
       <div className="container-page">
-        <div className="grid items-start gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-          <Reveal className="lg:sticky lg:top-32">
-            <p className="section-label">Notre action</p>
-            <h2 id="action-title" className="mt-5 font-display text-4xl leading-[1.04] tracking-tight sm:text-5xl">
-              L’humain <span className="italic text-ivp-red">au cœur des soins.</span>
-            </h2>
-            <p className="mt-6 max-w-md text-base leading-8 text-ivp-muted">
-              La santé va au-delà du traitement : il s’agit d’écouter, de comprendre et d’être présents aux côtés des personnes.
-            </p>
-            <div className="mt-8 overflow-hidden rounded-[1.75rem]">
-              <img src={eldersImg} alt="Soins de l’IVP auprès de personnes âgées" loading="lazy" className="aspect-[4/3] w-full object-cover" />
-            </div>
-            <Link to="/a-propos" className="group mt-8 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.16em]">
-              Découvrir notre action
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ivp-red text-white transition group-hover:translate-x-1"><ArrowRight size={16} /></span>
-            </Link>
+        {/* Mission + objectifs + plan */}
+        <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+          <Reveal>
+            <article className="relative flex h-full min-h-[420px] flex-col justify-between overflow-hidden rounded-[2rem] bg-ivp-red p-8 text-white sm:p-12">
+              <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/15" />
+              <div className="absolute -bottom-28 -left-16 h-72 w-72 rounded-full border border-white/10" />
+              <p className="relative text-xs font-semibold uppercase tracking-[0.28em] text-white/70">Notre mission</p>
+              <h2 id="mission-title" className="relative mt-8 font-display text-4xl leading-[1.08] tracking-tight sm:text-5xl">
+                Redonner espoir et dignité <span className="italic text-white/75">aux plus vulnérables</span> à travers les soins, la sensibilisation et l’aide humanitaire.
+              </h2>
+              <p className="relative mt-10 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/80">
+                <HeartHandshake size={18} /> Soigner · Soutenir · Espérer
+              </p>
+            </article>
           </Reveal>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {approach.map(({ icon: Icon, title, text }, i) => (
-              <Reveal key={title} delay={i * 80}>
-                <article className="h-full rounded-[1.5rem] border border-neutral-200 bg-white p-7 transition duration-500 hover:-translate-y-1 hover:border-ivp-red/40 hover:shadow-xl">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ivp-red-soft text-ivp-red"><Icon size={22} strokeWidth={1.5} /></span>
-                  <h3 className="mt-8 font-display text-2xl leading-tight">{title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-ivp-muted">{text}</p>
-                </article>
-              </Reveal>
-            ))}
-
-            {/* Qui aidons-nous */}
-            <Reveal delay={200} className="sm:col-span-2">
-              <div className="rounded-[1.75rem] bg-ivp-red p-8 text-white sm:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/65">Qui aidons-nous</p>
-                <p className="mt-3 font-display text-2xl leading-snug sm:text-3xl">Chaque personne mérite d’être considérée.</p>
-                <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-                  {helped.map(([t, d]) => (
-                    <li key={t} className="border-t border-white/25 pt-4">
-                      <h4 className="font-display text-xl">{t}</h4>
-                      <p className="mt-1 text-sm leading-6 text-white/70">{d}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="grid gap-5">
+            <Reveal delay={100}>
+              <article className="h-full rounded-[2rem] bg-white p-8 sm:p-10">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-ivp-red">Nos objectifs</p>
+                <Checklist items={objectifs} />
+              </article>
+            </Reveal>
+            <Reveal delay={200}>
+              <article className="h-full rounded-[2rem] bg-white p-8 sm:p-10">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-ivp-red">Notre plan d’action</p>
+                <Checklist items={plan} />
+              </article>
             </Reveal>
           </div>
         </div>
+
+        {/* Qui aidons-nous */}
+        <Reveal className="mt-24 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div className="max-w-2xl">
+            <p className="section-label">Qui aidons-nous</p>
+            <h3 className="mt-5 font-display text-4xl leading-[1.05] tracking-tight sm:text-5xl">
+              Nous venons en aide <span className="italic text-ivp-red">particulièrement à :</span>
+            </h3>
+          </div>
+          <Link to="/a-propos" className="group inline-flex w-fit items-center gap-3 text-sm font-bold uppercase tracking-[0.16em]">
+            Découvrir notre action
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-ivp-red text-white transition group-hover:translate-x-1"><ArrowRight size={16} /></span>
+          </Link>
+        </Reveal>
+
+        <ul className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-5">
+          {helped.map(({ label, image, pos }, i) => (
+            <Reveal as="li" key={label} delay={i * 80} className={i === 4 ? 'col-span-2 md:col-span-1' : ''}>
+              <figure className="group relative aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-ivp-red-dark">
+                {image ? (
+                  <img src={image} alt={label} loading="lazy" className={`h-full w-full object-cover ${pos} transition duration-[1200ms] group-hover:scale-105`} />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-ivp-red to-ivp-red-dark">
+                    <HeartHandshake size={46} strokeWidth={1.1} className="text-white/60" />
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                <figcaption className="absolute inset-x-4 bottom-4 font-display text-xl leading-tight text-white">{label}</figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </ul>
       </div>
     </section>
   )
