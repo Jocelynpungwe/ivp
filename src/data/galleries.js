@@ -28,6 +28,10 @@ const videoTitles = {
   'vid2.mp4': 'Journée des infirmiers · 3',
   'terrain-0003.mp4': 'Journée des infirmiers · 4',
   'terrain-0004.mp4': 'Journée des infirmiers · 5',
+  'distribution-cirage-brosses.mp4': 'Distribution de cirage et de brosses aux enfants de la rue',
+  'site-pakadjuma.mp4': 'Site de Pakadjuma',
+  'distribution-repas-enfants.mp4': 'Distribution de repas aux enfants',
+  'consultations-medicaments.mp4': 'Consultations et distribution de médicaments',
 }
 // Template leftover (a screen recording of an unrelated website): never shown publicly.
 const hiddenVideos = ['placeholder-video.mp4']

@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
-import { ArrowUpRight, CalendarHeart, CheckCircle2, Facebook, HandHeart, MapPin, MessageCircle, Sparkles } from 'lucide-react'
+import { Link, useSearchParams } from 'react-router-dom'
+import { ArrowUpRight, CalendarHeart, CheckCircle2, Facebook, HandHeart, MapPin, MessageCircle, Phone, Smartphone, Sparkles } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import useDocumentMeta from '../hooks/useDocumentMeta'
 import { MF, paid, services } from '../data/mf'
+import { ivpPhone, mobileMoney } from '../data/contact'
 import ivpHero from '../assets/img16.jpeg'
 import mfHero from '../assets/mf/hero.jpg'
+import ivpTeam from '../assets/team/benevoles.jpg'
 
 const FACEBOOK = 'https://www.facebook.com/profile.php?id=100091649801529'
 
@@ -21,7 +23,7 @@ const niches = {
     focus: 'focus:border-ivp-red',
     panel: 'bg-[#f7f5f2]',
     title: 'Parlons de votre engagement.',
-    text: 'Une question sur l’IVP, l’envie de devenir bénévole ou partenaire, ou de soutenir nos soins gratuits aux plus démunis ? Écrivez-nous.',
+    text: 'Une question sur l’IVP, l’envie de devenir bénévole ou partenaire, ou de soutenir nos soins gratuits aux plus démunis ? Appelez-nous ou suivez-nous sur Facebook.',
     reasons: ['Demande d’information', 'Devenir bénévole', 'Devenir partenaire', 'Soutenir l’IVP / faire un don', 'Autre'],
     place: 'Organisation congolaise à but non lucratif (asbl)',
     placeSub: 'Des soins infirmiers au service des communautés vulnérables',
@@ -177,6 +179,34 @@ export default function Contact() {
                   </li>
                 )}
                 {niche === 'ivp' && (
+                  <>
+                    <li className="flex gap-4">
+                      <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${t.soft}`}><Phone size={19} /></span>
+                      <div>
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-black/40">Téléphone</p>
+                        <a href={`tel:${ivpPhone.tel}`} className="mt-1 inline-block text-base font-medium hover:underline">{ivpPhone.display}</a>
+                      </div>
+                    </li>
+                    <li className="flex gap-4">
+                      <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${t.soft}`}><Smartphone size={19} /></span>
+                      <div className="min-w-0 flex-1">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-black/40">Mobile money · Dons en RDC</p>
+                        <ul className="mt-2 divide-y divide-black/10 border-y border-black/10">
+                          {mobileMoney.map((m) => (
+                            <li key={m.name} className="flex items-center justify-between gap-4 py-2.5 text-sm">
+                              <span className="font-semibold">{m.name}</span>
+                              <a href={`tel:${m.tel}`} className="text-neutral-600 hover:text-ivp-red">{m.display}</a>
+                            </li>
+                          ))}
+                        </ul>
+                        <Link to="/don" className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-ivp-red hover:underline">
+                          Autres moyens de faire un don <ArrowUpRight size={14} />
+                        </Link>
+                      </div>
+                    </li>
+                  </>
+                )}
+                {niche === 'ivp' && (
                   <li className="flex gap-4">
                     <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${t.soft}`}><Facebook size={19} /></span>
                     <div>
@@ -190,7 +220,17 @@ export default function Contact() {
               </ul>
             </div>
 
-            {/* Form */}
+            {/* Form (MF Médical) / photo (IVP) */}
+            {niche === 'ivp' ? (
+              <figure className="group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-ivp-red-dark lg:min-h-full">
+                <img src={ivpTeam} alt="Les équipes de l’IVP devant la bannière des soins médicaux gratuits" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[50%_40%] transition duration-[1400ms] group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ivp-red-dark/90 via-transparent to-transparent" />
+                <figcaption className="absolute inset-x-0 bottom-0 p-8 text-white sm:p-10">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/70">Soigner · Soutenir · Espérer</p>
+                  <p className="mt-3 max-w-md font-display text-3xl leading-tight sm:text-4xl">Les équipes de l’IVP, au service des plus démunis.</p>
+                </figcaption>
+              </figure>
+            ) : (
             <div className={`rounded-[2rem] p-6 transition-colors duration-700 sm:p-10 lg:p-12 ${t.panel}`}>
               {status === 'sent' ? (
                 <div className="flex min-h-[480px] flex-col items-center justify-center text-center" role="status">
@@ -271,6 +311,7 @@ export default function Contact() {
                 </form>
               )}
             </div>
+            )}
           </div>
         </div>
       </section>
