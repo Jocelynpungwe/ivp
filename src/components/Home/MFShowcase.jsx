@@ -16,7 +16,7 @@ export default function MFShowcase() {
           <div className="max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-mf-gold-soft">La carte des soins</p>
             <h3 className="mt-4 font-display text-3xl leading-tight tracking-tight sm:text-5xl">
-              Six soins, <span className="gold-text italic">une même exigence.</span>
+              Huit soins, <span className="gold-text italic">une même exigence.</span>
             </h3>
           </div>
           <p className="max-w-xs text-sm leading-7 text-white/50">Passez la souris sur un soin pour découvrir ses bienfaits.</p>
@@ -29,11 +29,17 @@ export default function MFShowcase() {
           <Link to="/contact?sujet=soins" className="shrink-0 text-xs font-bold uppercase tracking-[0.18em] text-mf-gold-soft transition hover:text-white">Demander un tarif →</Link>
         </Reveal>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
-            <Reveal key={s.id} delay={(i % 3) * 100}>
-              <article tabIndex={0} className="group relative isolate flex min-h-[460px] flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white/10 bg-mf-plum-dark outline-none focus-visible:ring-2 focus-visible:ring-mf-gold lg:aspect-[3/4] lg:min-h-0">
-                <img src={s.image} alt={`${s.title} — ${s.subtitle}`} loading="lazy" className="absolute inset-0 -z-20 h-full w-full object-cover transition duration-[1400ms] group-hover:scale-110 group-focus-within:scale-110" />
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-6">
+          {services.map((s, i) => {
+            // Cards sit 3 per row; a short last row (1 or 2 cards) is stretched to fill it
+            const rest = services.length % 3
+            const wide = rest !== 0 && i >= services.length - rest
+            const span = !wide ? 'lg:col-span-2' : rest === 1 ? 'md:col-span-2 lg:col-span-6' : 'lg:col-span-3'
+            const ratio = !wide ? 'lg:min-h-0 lg:aspect-[3/4]' : rest === 1 ? 'lg:min-h-0 lg:aspect-[21/9]' : 'lg:min-h-[560px]'
+            return (
+            <Reveal key={s.id} delay={(i % 3) * 100} className={span}>
+              <article tabIndex={0} className={`group relative isolate flex min-h-[460px] flex-col justify-between overflow-hidden rounded-[1.75rem] border border-white/10 bg-mf-plum-dark outline-none focus-visible:ring-2 focus-visible:ring-mf-gold ${ratio}`}>
+                <img src={s.image} alt={`${s.title} — ${s.subtitle}`} loading="lazy" className={`absolute inset-0 -z-20 h-full w-full object-cover ${wide ? 'object-[50%_25%]' : ''} transition duration-[1400ms] group-hover:scale-110 group-focus-within:scale-110`} />
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-mf-ink via-mf-ink/55 to-mf-ink/10 transition duration-700 lg:group-hover:from-mf-ink/95 lg:group-hover:via-mf-ink/80 lg:group-focus-within:from-mf-ink/95 lg:group-focus-within:via-mf-ink/80" />
 
                 <div className="flex items-start justify-between p-6">
@@ -61,7 +67,8 @@ export default function MFShowcase() {
                 </div>
               </article>
             </Reveal>
-          ))}
+            )
+          })}
         </div>
 
         <Reveal className="mt-14 flex flex-wrap items-center justify-center gap-4">

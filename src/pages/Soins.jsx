@@ -190,7 +190,7 @@ export default function Soins() {
           <Reveal className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-mf-gold-soft">La carte des soins</p>
             <h2 id="soins-list" className="mt-5 font-display text-4xl leading-[1.02] tracking-tight sm:text-6xl">
-              Six soins, <span className="gold-text italic">une même exigence.</span>
+              Huit soins, <span className="gold-text italic">une même exigence.</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-base leading-8 text-white/55">Chaque soin se réalise sur rendez-vous. {paid.prices}</p>
           </Reveal>

@@ -26,7 +26,7 @@ const direction = [
 
 const representants = [
   { name: 'Anne Françoise Lap', role: 'Représentante de l’IVP en Belgique', image: anneFrancoise, pos: 'object-[50%_30%]' },
-  { name: 'Mme Memoria Pungwe', role: 'Représentante de l’IVP au Canada', image: memoria, pos: 'object-[50%_25%]' },
+  { name: 'Memoria Pungwe', role: 'Représentante de l’IVP au Canada', image: memoria, pos: 'object-[50%_25%]' },
   { name: 'Mr Mardoché', role: 'Représentant de l’IVP à Mbuji-Mayi', image: mardoche, pos: 'object-[62%_35%]' },
 ]
 

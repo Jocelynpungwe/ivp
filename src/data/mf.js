@@ -4,14 +4,18 @@ import pedicure from '../assets/mf/s-pedicure.jpg'
 import lifting from '../assets/mf/s-lifting.jpg'
 import reflexologie from '../assets/mf/s-reflexologie.jpg'
 import massage from '../assets/mf/s-drainage.jpg'
+import minceur from '../assets/mf/s-minceur.jpg'
+import hifu from '../assets/mf/s-hifu.jpg'
 
 // Business details for MF Médical.
-// TODO: set the real WhatsApp number (international format, digits only, e.g. '32470123456').
-// While empty, every "Prendre rendez-vous" button routes to the contact form instead.
+// WhatsApp number shown on the MF Médical flyer (international format, digits only).
+// If emptied, every "Prendre rendez-vous" button routes to the contact form instead.
 export const MF = {
   name: 'MF Médical',
   tagline: 'Soins esthétiques & bien-être',
-  whatsapp: '',
+  whatsapp: '243816091136',
+  phone: '+243 816 091 136',
+  kinshasa: 'Kinshasa · Ngaliema',
 }
 
 export const bookingLink = MF.whatsapp
@@ -123,6 +127,38 @@ export const services = [
     ],
     result: 'Des jambes plus légères, une peau plus tonique, un corps détendu.',
     tone: 'teal',
+  },
+  {
+    id: 'obesite',
+    tags: ['Accompagnement personnalisé', 'Résultats durables'],
+    title: 'Traitement de l’obésité',
+    subtitle: 'Perte du ventre & silhouette',
+    image: minceur,
+    points: [
+      'Suivi diététique personnalisé (rééquilibrage alimentaire).',
+      'Programme d’activité physique adapté.',
+      'Soins esthétiques ciblés (raffermissement, modelage, drainage).',
+      'Accompagnement médical (contrôle du poids et de la santé).',
+      'Conseils et motivation tout au long du parcours.',
+    ],
+    result: 'Un ventre plus plat, une perte de poids durable, plus d’énergie et plus de confiance en vous.',
+    tone: 'teal',
+  },
+  {
+    id: 'hifu',
+    tags: ['Lifting sans chirurgie', 'Sans cicatrice, sans éviction sociale'],
+    title: 'HIFU',
+    subtitle: 'Lifting sans chirurgie',
+    image: hifu,
+    points: [
+      'Lifte et raffermit la peau : stimule la production naturelle de collagène et d’élastine.',
+      'Réduit les rides et ridules : effet tenseur visible et durable.',
+      'Améliore l’ovale du visage : redessine les contours et lutte contre le relâchement.',
+      'Sans bistouri, sans cicatrice, sans éviction sociale.',
+      'Zones traitées : visage, cou, décolleté, contour des yeux, ventre et bras.',
+    ],
+    result: 'Un visage plus ferme, une peau plus tonique, une meilleure confiance. Résultats visibles dès les premières semaines.',
+    tone: 'rose',
   },
 ]
 

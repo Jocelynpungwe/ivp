@@ -25,6 +25,8 @@ const mfLinks = [
   { name: 'Lifting colombien', path: '/soins#lifting' },
   { name: 'Réflexologie plantaire', path: '/soins#reflexologie' },
   { name: 'Massage & drainage lymphatique', path: '/soins#drainage' },
+  { name: 'Traitement de l’obésité', path: '/soins#obesite' },
+  { name: 'HIFU · Lifting sans chirurgie', path: '/soins#hifu' },
 ]
 
 function FooterLink({ to, children }) {

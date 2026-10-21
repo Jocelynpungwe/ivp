@@ -42,7 +42,7 @@ const niches = {
     text: 'Un soin à réserver, une question sur un traitement ? Dites-nous ce qui vous ferait du bien, nous revenons vers vous.',
     reasons: ['Prendre rendez-vous', 'Question sur un soin', 'Autre'],
     place: 'Bruxelles et Kinshasa',
-    placeSub: 'Infirmière esthéticienne diplômée en Belgique',
+    placeSub: `Kinshasa (Ngaliema) · Infirmière esthéticienne diplômée en Belgique`,
   },
 }
 
@@ -173,8 +173,9 @@ export default function Contact() {
                     <div>
                       <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-black/40">WhatsApp</p>
                       <a href={`https://wa.me/${MF.whatsapp}`} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-base font-medium hover:underline">
-                        Écrire sur WhatsApp <ArrowUpRight size={15} />
+                        {MF.phone} <ArrowUpRight size={15} />
                       </a>
+                      <p className="mt-0.5 text-sm text-black/45">Écrire sur WhatsApp</p>
                     </div>
                   </li>
                 )}
