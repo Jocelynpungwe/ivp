@@ -18,8 +18,9 @@ import {
 import Reveal from '../components/Reveal'
 import BookingButton from '../components/BookingButton'
 import MFPhotoStrip from '../components/Home/MFPhotoStrip'
+import PrpDetail from '../components/Soins/PrpDetail'
 import useDocumentMeta from '../hooks/useDocumentMeta'
-import { services, assurances, MF as brand, paid } from '../data/mf'
+import { services, assurances, MF as brand, paid, prpTypes } from '../data/mf'
 import heroImg from '../assets/mf/hero.jpg'
 import ambianceImg from '../assets/mf/ambiance.jpg'
 import glowImg from '../assets/mf/glow.jpg'
@@ -50,7 +51,8 @@ const faq = [
   { q: 'Qui réalise les soins ?', a: 'Les soins sont réalisés par une infirmière esthéticienne diplômée en Belgique, avec professionnalisme, sécurité et douceur.' },
   { q: 'Où ont lieu les soins ?', a: 'À Bruxelles et à Kinshasa, sur rendez-vous.' },
   { q: 'Comment prendre rendez-vous ?', a: 'Cliquez sur « Prendre rendez-vous », indiquez le soin souhaité et vos coordonnées : nous vous recontactons pour convenir d’un créneau.' },
-  { q: 'Que fait le PRP ?', a: 'Le PRP utilise vos propres plaquettes sanguines pour stimuler la régénération cellulaire. Il améliore la qualité de la peau, réduit les rides, les cicatrices et les taches, et favorise la repousse des cheveux en renforçant le cuir chevelu.' },
+  { q: 'Que fait le PRP ?', a: 'Le PRP utilise vos propres plaquettes sanguines pour stimuler la régénération cellulaire. Il améliore la qualité de la peau, réduit les rides, les cicatrices et les taches, et favorise la repousse des cheveux en renforçant le cuir chevelu. Il est aussi utilisé pour les articulations, tendons et muscles.' },
+  { q: 'Combien de séances de PRP faut-il ?', a: 'Cela dépend de la zone : en général 3 à 4 séances espacées d’un mois pour les cheveux, 1 à 3 séances espacées de 4 semaines pour le visage, et 1 à 3 injections pour une articulation ou un tendon. Un rappel est souvent conseillé tous les 6 à 12 mois.' },
   { q: 'Le lifting colombien est-il invasif ?', a: 'Non. C’est une technique non invasive et naturelle qui stimule la production de collagène pour remodeler, raffermir et améliorer la tonicité des fessiers. Les résultats sont progressifs et durables.' },
   { q: 'Quand voit-on le résultat du blanchiment dentaire ?', a: 'Le résultat est visible dès la première séance. Le procédé est sûr et contrôlé, et élimine les taches liées au café, au thé ou au tabac.' },
   { q: 'Mes soins sont-ils sûrs ?', a: 'Oui : les soins sont sûrs et personnalisés, réalisés avec des produits de qualité et du matériel certifié.' },
@@ -207,7 +209,8 @@ export default function Soins() {
             {services.map((s, i) => {
               const flip = i % 2 === 1
               return (
-                <article key={s.id} id={s.id} className="scroll-mt-28 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+                <div key={s.id}>
+                <article id={s.id} className="scroll-mt-28 grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
                   <Reveal className={flip ? 'lg:order-2' : ''}>
                     <div className="group relative">
                       <div className={`absolute -inset-3 rounded-[2rem] border border-mf-gold/30 transition duration-700 group-hover:-inset-4 ${flip ? 'translate-x-2' : '-translate-x-2'} translate-y-2`} />
@@ -236,6 +239,17 @@ export default function Soins() {
                         </li>
                       ))}
                     </ul>
+                    {s.id === 'prp' && (
+                      <ul className="mt-7 flex flex-wrap gap-2" aria-label="Applications du PRP">
+                        {prpTypes.map((t) => (
+                          <li key={t.id}>
+                            <a href={`#${t.id}`} className="inline-flex items-center gap-1.5 rounded-full bg-mf-gold px-4 py-2 text-xs font-bold tracking-wide text-mf-ink transition hover:bg-mf-gold-soft">
+                              {t.title} <ArrowUpRight size={13} />
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                     <p className="mt-8 border-l-2 border-mf-gold pl-5 font-display text-xl italic leading-snug text-mf-gold-soft sm:text-2xl">{s.result}</p>
                     <p className="mt-6 flex items-center gap-2 text-xs text-white/45"><Coins size={14} className="text-mf-gold" /> Service payant · tarif communiqué sur demande</p>
                     <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -248,6 +262,8 @@ export default function Soins() {
                     </div>
                   </Reveal>
                 </article>
+                {s.id === 'prp' && <PrpDetail />}
+                </div>
               )
             })}
           </div>
